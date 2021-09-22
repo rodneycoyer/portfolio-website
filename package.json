@@ -1,9 +1,9 @@
 {
   "name": "rodney-coyer-portfolio",
   "version": "1.0.0",
-  "private": true,
-  "description": "Rodney Coyer Portfolio",
-  "author": "roofWalker",
+  "private": false,
+  "description": "Portfolio Website",
+  "author": "Rodney Coyer",
   "keywords": [
     "gatsby"
   ],
@@ -17,6 +17,8 @@
   "dependencies": {
     "gatsby": "^3.13.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "react-typewriter": "^0.4.1"
   }
 }
