@@ -1,9 +1,9 @@
 {
   "name": "rodney-coyer-portfolio",
   "version": "1.0.0",
-  "private": false,
-  "description": "Portfolio Website",
-  "author": "Rodney Coyer",
+  "private": true,
+  "description": "Rodney Coyer Portfolio",
+  "author": "roofWalker",
   "keywords": [
     "gatsby"
   ],
@@ -15,10 +15,14 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "gatsby": "^3.13.1",
+    "gatsby-plugin-image": "^1.14.0",
+    "gatsby-plugin-sharp": "^3.14.0",
+    "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-transformer-sharp": "^3.14.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "react-typewriter": "^0.4.1"
+    "react-dom": "^17.0.1"
   }
 }
