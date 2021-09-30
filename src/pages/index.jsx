@@ -2,6 +2,7 @@ import * as React from "react";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 import Hero from "../components/HeroComponent";
+import NavBar from "../components/NavBarComponent";
 
 const IndexPage = () => {
   const darkTheme = createTheme({
@@ -13,7 +14,9 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+      <NavBar />
       <Hero />
+
     </ThemeProvider>
   );
 }

@@ -9,32 +9,33 @@ import { makeStyles } from "@material-ui/core/styles";
 import Social from "./SocialComponent";
 import Hidden from "@material-ui/core/Hidden";
 import Zoom from "@material-ui/core/Zoom";
+import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = makeStyles((theme) => ({
-    section: {
-        height: "90vh",
-    },
-    content: {
-        height: "100%",
-        zIndex: 100,
-        position: "relative",
-    },
-    container: {
-        height: "100%",
-    },
-    overlay: {
-        backgroundColor: "rgba(0,0,0,0.4)",
-        height: "100%",
-        width: "100%",
-        position: "absolute",
-        zIndex: 2,
-    },
-    heroImage: {
-        height: "100%",
-        width: "100%",
-        zIndex: 1,
-    },
+  section: {
+      height: "90vh",
+  },
+  content: {
+      height: "100%",
+      zIndex: 100,
+      position: "relative",
+  },
+  container: {
+      height: "100%",
+  },
+  overlay: {
+      background: "rgba(05, 06, 35, 0.7)",
+      height: "100%",
+      width: "100%",
+      position: "absolute",
+      zIndex: 2,
+  },
+  heroImage: {
+      height: "100%",
+      width: "100%",
+      zIndex: 1,
+  },
 }));
 
 export default function HeroSection() {
@@ -57,10 +58,11 @@ export default function HeroSection() {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Zoom in={shouldShow}>
+          <Zoom in={shouldShow} style={{ transitionDelay: shouldShow ? '500ms' : '0ms' }}>
             <Grid item sm={8}>
               <Typography component="h1" variant="h3">
-                Howdy, my name is Rodney. I'm a software engineer.
+                Howdy, my name is Rodney.
+                I'm a software engineer.
               </Typography>
               <Typography variant="h5">
                 Writing code for web and mobile based applications is what I do.
@@ -70,6 +72,7 @@ export default function HeroSection() {
                   href="mailto:rodney.coyer@gmail.com"
                   variant="outlined"
                   color="secondary"
+                  startIcon={<MailOutlineIcon />}
                 >
                   Email Me
                 </Button>
