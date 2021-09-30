@@ -28,6 +28,7 @@
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "typewriter-effect": "^2.18.2"
   }
 }

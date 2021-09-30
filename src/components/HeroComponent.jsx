@@ -11,6 +11,7 @@ import Hidden from "@material-ui/core/Hidden";
 import Zoom from "@material-ui/core/Zoom";
 import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import { StaticImage } from "gatsby-plugin-image";
+import Typewriter from "typewriter-effect";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -59,15 +60,51 @@ export default function HeroSection() {
           alignItems="center"
         >
           <Zoom in={shouldShow} style={{ transitionDelay: shouldShow ? '500ms' : '0ms' }}>
-            <Grid item sm={8}>
+            <Grid item sm={9}>
+
+
+
+
+
+
+
               <Typography component="h1" variant="h3">
-                Howdy, my name is Rodney.
-                I'm a software engineer.
+
+
+
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .pauseFor(1000)
+                  .typeString('Howdy! <br /> ')
+                  .pauseFor(300)
+                  .typeString('My name is Rodney. <br />')
+                  .pauseFor(500)
+                  .typeString(`I'm creative`)
+                  .pauseFor(300)
+                  .deleteChars(8)
+                  .typeString('a problem solver...')
+                  .pauseFor(300)
+                  .deleteChars(17)
+                  .typeString('software engineer')
+                  .start();
+              }}
+            />
               </Typography>
               <Typography variant="h5">
                 Writing code for web and mobile based applications is what I do.
               </Typography>
-              <Box my={2}>
+
+
+
+
+
+
+
+
+
+
+              <Box my={3} sm={9}>
                 <Button
                   href="mailto:rodney.coyer@gmail.com"
                   variant="outlined"
@@ -77,6 +114,11 @@ export default function HeroSection() {
                   Email Me
                 </Button>
               </Box>
+              <Hidden smUp>
+                <Grid item>
+                  <Social direction="row" />
+                </Grid>
+              </Hidden>
             </Grid>
           </Zoom>
           <Hidden xsDown>
