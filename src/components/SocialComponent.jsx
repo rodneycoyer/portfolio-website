@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 
+// todo: research how to map material.ui and f-awesome icons. Error returns.
 const socialItems = [
     {icon: LinkedInIcon, url: "https://www.linkedin.com/in/rodney-coyer-b2922b72/"},
     {icon: GitHubIcon, url: "https://github.com/roofwalker"},
@@ -27,7 +28,7 @@ const Social = ({ direction }) => {
                 </Link>
             </Grid>
             <Grid item>
-                <Link href="">
+                <Link href="https://github.com/roofwalker">
                     <IconButton color="default">
                         <GitHubIcon color="secondary" />
                     </IconButton>
@@ -41,7 +42,7 @@ const Social = ({ direction }) => {
                 </Link>
             </Grid>
             <Grid item>
-                <Link href="">
+                <Link href="https://codepen.io/roofwalker">
                     <IconButton color="default">
                         <FontAwesomeIcon icon={faCodepen} style={{color:"red"}} />
                     </IconButton>

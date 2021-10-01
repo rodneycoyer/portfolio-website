@@ -3,9 +3,9 @@ import Link from "@material-ui/core/Link"
 import { AppBar, Container, makeStyles, Slide, Toolbar, useScrollTrigger } from "@material-ui/core/";
 
 const navigationLinks = [
-    {name: "about", href: ""},
-    {name: "projects", href: ""},
-    {name: "contact", href: ""},
+    {name: "about", href: "/about"},
+    {name: "projects", href: "/projects"},
+    {name: "contact", href: "/contact"},
 ];
 
 const useStyles = makeStyles((theme) => ({

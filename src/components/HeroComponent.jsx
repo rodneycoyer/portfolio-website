@@ -23,17 +23,17 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
   },
   container: {
-      height: "100%",
+      height: "90vh",
   },
   overlay: {
       background: "rgba(05, 06, 35, 0.7)",
-      height: "100%",
+      height: "90vh",
       width: "100%",
       position: "absolute",
       zIndex: 2,
   },
   heroImage: {
-      height: "100%",
+      height: "90vh",
       width: "100%",
       zIndex: 1,
   },
@@ -60,51 +60,29 @@ export default function HeroSection() {
           alignItems="center"
         >
           <Zoom in={shouldShow} style={{ transitionDelay: shouldShow ? '500ms' : '0ms' }}>
-            <Grid item sm={9}>
-
-
-
-
-
-
-
-              <Typography component="h1" variant="h3">
-
-
-
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .pauseFor(1000)
-                  .typeString('Howdy! <br /> ')
-                  .pauseFor(300)
-                  .typeString('My name is Rodney. <br />')
-                  .pauseFor(500)
-                  .typeString(`I'm creative`)
-                  .pauseFor(300)
-                  .deleteChars(8)
-                  .typeString('a problem solver...')
-                  .pauseFor(300)
-                  .deleteChars(17)
-                  .typeString('software engineer')
-                  .start();
-              }}
-            />
+            <Grid item lg={9}>
+              <Typography component="h1" variant="h2">
+               <em>Hi There!!</em>
               </Typography>
-              <Typography variant="h5">
-                Writing code for web and mobile based applications is what I do.
+              <Typography component="div" variant="h3">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .pauseFor(1000)
+                      .typeString('My name is Rodney.')
+                      .pauseFor(1000)
+                      .typeString(`<br /> I'm a <span style="color: #DC143C;"> problem solver...</span>`)
+                      .pauseFor(1000)
+                      .deleteChars(20)
+                      .typeString('<span style="color: #00BFFF;">creative...</span>')
+                      .pauseFor(1000)
+                      .deleteChars(11)
+                      .typeString('a <span style="color: 	#DC143C;"> software engineer.</span>')
+                      .start();
+                  }}
+                />
               </Typography>
-
-
-
-
-
-
-
-
-
-
-              <Box my={3} sm={9}>
+              <Box my={3} gridColumn="span 6">
                 <Button
                   href="mailto:rodney.coyer@gmail.com"
                   variant="outlined"
@@ -114,14 +92,14 @@ export default function HeroSection() {
                   Email Me
                 </Button>
               </Box>
-              <Hidden smUp>
-                <Grid item>
+                <Box gridColumn="span 6">
+              <Hidden mdUp>
                   <Social direction="row" />
-                </Grid>
               </Hidden>
+                </Box>
             </Grid>
           </Zoom>
-          <Hidden xsDown>
+          <Hidden smDown>
             <Grid item>
               <Social direction="column" />
             </Grid>
