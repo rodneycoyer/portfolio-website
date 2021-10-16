@@ -13,6 +13,7 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import { StaticImage } from "gatsby-plugin-image";
 import Typewriter from "typewriter-effect";
 
+
 const useStyles = makeStyles((theme) => ({
   section: {
       height: "90vh",
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       height: "90vh",
   },
   overlay: {
-      background: "rgba(05, 06, 35, 0.7)",
+      background: "linear-gradient(105deg, black, transparent, black)",
       height: "90vh",
       width: "100%",
       position: "absolute",
@@ -59,7 +60,7 @@ export default function HeroSection() {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Zoom in={shouldShow} style={{ transitionDelay: shouldShow ? '500ms' : '0ms' }}>
+          <Zoom in={shouldShow} style={{ transitionDelay: shouldShow ? '700ms' : '0ms' }}>
             <Grid item lg={9}>
               <Typography component="h1" variant="h2">
                <em>Hi There!!</em>
@@ -82,7 +83,7 @@ export default function HeroSection() {
                   }}
                 />
               </Typography>
-              <Box my={3} gridColumn="span 6">
+              <Box my={3} gridColumn="span 3">
                 <Button
                   href="mailto:rodney.coyer@gmail.com"
                   variant="outlined"
@@ -92,11 +93,6 @@ export default function HeroSection() {
                   Email Me
                 </Button>
               </Box>
-                <Box gridColumn="span 6">
-              <Hidden mdUp>
-                  <Social direction="row" />
-              </Hidden>
-                </Box>
             </Grid>
           </Zoom>
           <Hidden smDown>

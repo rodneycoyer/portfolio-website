@@ -1,31 +1,16 @@
-import * as React from "react";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { CssBaseline } from "@material-ui/core";
-import Hero from "../components/HeroComponent";
-import NavBar from "../components/NavBarComponent";
-import AboutPage from "../components/AboutComponent";
-import ResumePage from "../components/ResumeComponent";
-import ProjectPage from "../components/ProjectComponent";
-import Footer from "../components/FooterComponent";
+import React from "react";
+import Layout from "../components/LayoutComponent";
+import Skills from "../components/SkillsComponent"
+import Seo from "../components/SeoComponent";
 
-const IndexPage = () => {
-  const darkTheme = createTheme({
-    palette: {
-      type: "dark"
-    }
-});
-
-  return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <NavBar />
-      <Hero />
-      <AboutPage />
-      <ResumePage />
-      <ProjectPage />
-      <Footer />
-    </ThemeProvider>
-  );
-}
+const IndexPage = () => (
+  <Layout>
+    <Seo
+      title="Home"
+      keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`]}
+    />
+    <Skills />
+  </Layout>
+)
 
 export default IndexPage;

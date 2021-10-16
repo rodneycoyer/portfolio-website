@@ -3,16 +3,15 @@ import Link from "@material-ui/core/Link"
 import { AppBar, Container, makeStyles, Slide, Toolbar, useScrollTrigger } from "@material-ui/core/";
 
 const navigationLinks = [
-    {name: "about", href: "/about"},
-    {name: "projects", href: "/projects"},
-    {name: "contact", href: "/contact"},
+    {id: 0, name: "portfolio", href: "#/projects"},
+    {id: 1, name: "contact", href: "/"},
 ];
 
 const useStyles = makeStyles((theme) => ({
     link: {
         marginRight: 30,
         "&:hover": {
-            color: 'rgba(255, 0, 0)'
+            color: '#f50057'
         },
     }
 }));
@@ -20,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 const NavBar = () => {
     const styles = useStyles();
     const trigger = useScrollTrigger();
+
     return (
         <Slide in={!trigger}>
             <AppBar position="sticky" color="default">

@@ -1,83 +1,50 @@
-import React from "react";
-import { Button, Card, CardContent, CardMedia, CardActions, CardActionArea, Container, Grid, Typography } from "@material-ui/core";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { Component } from "react";
+import { Box, Card, CardContent, CardMedia, CardActionArea, Container, Grid, Typography } from "@material-ui/core";
 
-const projects = [
-    {
-        id: 0,
-        name: "Project 1",
-        image: "../images/icon.png",
-        briefDescription: "brief description of project",
-        fullDescription: "full description of project and tech used.",
-    },
-    {
-        id: 1,
-        name: "Project 2",
-        image: "../images/icon.png",
-        briefDescription: "brief description of project",
-        fullDescription: "full description of project and tech used.",
-    },
-    {
-        id: 2,
-        name: "Project 3",
-        image: "../images/icon.png",
-        briefDescription: "brief description of project",
-        fullDescription: "full description of project and tech used.",
-    },
-    {
-        id: 3,
-        name: "Project 4",
-        image: "../images/icon.png",
-        briefDescription: "brief description of project",
-        fullDescription: "full description of project and tech used.",
-    },
-];
 
-function RenderProjectCard({ project }) {
-    return (
-            <Card >
-                <CardActionArea>
-                    <CardMedia>
-                        <React.Fragment>
-                            <StaticImage
-                                src="../images/header-background.jpg"
-                                alt="silhouette of a person walking on beach, during sunset, at Ruby Beach, Wa"
-                            />
-                        </React.Fragment>
-                    </CardMedia>
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            Project Title
-                        </Typography>
-                        <Typography variant="body2" color="secondary">
-                            Brief description of project
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button>View More</Button>
-                </CardActions>
-            </Card>
-    );
-}
+class ProjectDirectory extends Component {
+    render() {
+        const directory = this.props.projects.map(project => {
+            return (
+                <Grid item xs={12} sm={6} md={4} key={project.id}>
+                    <Card sx={{ maxWidth: 345}} >
+                        <CardActionArea>
+                            <CardMedia>
+                                <React.Fragment>
+                                    <img
+                                        src={project.image}
+                                        alt={project.briefDescription}
+                                        height="125"
+                                    />
+                                </React.Fragment>
+                            </CardMedia>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    {project.name}
+                                </Typography>
+                                <Typography variant="body2" color="secondary">
+                                    {project.briefDescription}
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                </Grid>
+            );
+        });
 
-const ProjectPage = ({props}) => {
-
-    const directory = projects.map(project => {
         return (
-            <Grid item xs={6} md={4} lg={4} key={project.id}>
-                <RenderProjectCard />
-            </Grid>
+            <Box px={{ xs: 3, sm: 5 }} py={{ xs: 3, sm: 5 }}>
+                <Container maxWidth="lg" id="#projects">
+                    <Typography variant="h4" >
+                        Projects
+                    </Typography>
+                    <Grid container spacing={2}>
+                        {directory}
+                    </Grid>
+                </Container>
+            </Box>
         );
-    });
-
-    return (
-        <Container maxWidth="lg">
-            <Grid container spacing={2} justifyContent="center">
-                {directory}
-            </Grid>
-        </Container>
-    );
+    }
 }
 
-export default ProjectPage;
+export default ProjectDirectory;
