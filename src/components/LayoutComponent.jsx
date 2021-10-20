@@ -30,10 +30,7 @@ const Layout = ({children}) => (
                 <ThemeProvider theme={darkTheme}>
                     <CssBaseline />
                     <NavBar />
-                    <Hero />
-                    <Container maxWidth="lg" style={{backgroundColor:"light-black"}}>
                         <main>{children}</main>
-                    </Container>
                     <Footer />
                 </ThemeProvider>
             </React.Fragment>
