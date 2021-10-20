@@ -1,19 +1,48 @@
 import React from "react";
+import { Link, graphql } from "gatsby";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import Seo from "../components/SeoComponent";
-import NavBar from "../components/NavBarComponent";
-import Footer from "../components/FooterComponent";
 import Layout from "../components/LayoutComponent";
-import { Container, CssBaseline } from "@material-ui/core";
-import { createTheme, ThemeProvider } from "@material-ui/styles";
-import ProjectDirectory from "../components/ProjectComponent";
+import { Box, Card, CardContent, CardMedia, CardActionArea, Container, CssBaseline, Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-const ProjectsPage = () => {
+const useStyles = makeStyles((theme) => ({
+  link: {
+    marginTop: 5,
+    textDecoration: "none",
+    color: "white",
+        "&:hover": {
+        color: "#d50000"
+    },
+  },
+  heading: {
+    marginTop: 150,
+    marginBottom: 15
+  },
+  card: {
+    maxWidth: 345,
+    marginBottom: 25,
+  }
+  
+}));
+
+const ProjectsPage = ({ data }) => {
+  const styles = useStyles();
     return (
-  <Layout>
-    <Container maxWidth="lg">
-        <h1>Project Cards will go here</h1>
-    </Container>
-  </Layout>
+      <Layout>
+        <Seo title="projects" />
+        <Container maxWidth="lg">
+            <Typography variant="h4" className={styles.heading}> Projects and Labs </Typography>
+            <Box>
+              <Link to="/" className={styles.link}> Home </Link>
+            </Box>
+            <hr />
+            <p>below are some of the latests projects and experiments</p>
+            <Grid container align="center">
+              
+            </Grid>
+        </Container>
+      </Layout>
     );
 }
 

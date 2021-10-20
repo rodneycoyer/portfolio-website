@@ -1,14 +1,8 @@
 ---
 
-title: "Project 3"
-
-date: "06-14-2021"
+title: "Project 1"
 
 website: ""
-
-github: ""
-
-dockerHub: ""
 
 role: "software engineer"
 
@@ -24,8 +18,8 @@ full_description: "longer description of the project"
 
 lessons_learned: ""
 
-image01: "../../public/icon.png"
-image01_alt: "icon"
+image01: ""
+image01_alt: ""
 
 image02: ""
 image02_alt: ""

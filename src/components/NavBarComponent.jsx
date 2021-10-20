@@ -3,7 +3,8 @@ import Link from "@material-ui/core/Link"
 import { AppBar, Container, makeStyles, Slide, Toolbar, useScrollTrigger } from "@material-ui/core/";
 
 const navigationLinks = [
-    {id: 0, name: "portfolio", href: "#/projects"},
+    {id: 0, name: "about", href: "/"},
+    {id: 0, name: "projects", href: "/projects"},
     {id: 1, name: "contact", href: "/"},
 ];
 
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     link: {
         marginRight: 30,
         "&:hover": {
-            color: '#f50057'
+            color: '#d50000'
         },
     }
 }));
