@@ -15,14 +15,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
+        name: `projects`,
         path: `${__dirname}/projects`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: `${__dirname}/src/pages/projects`,
       },
     },
     `gatsby-plugin-react-helmet`,

@@ -1,8 +1,7 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { CssBaseline, Container } from "@material-ui/core";
-import Hero from "./HeroComponent";
+import { CssBaseline } from "@material-ui/core";
 import NavBar from "./NavBarComponent";
 import Footer from "./FooterComponent";
 

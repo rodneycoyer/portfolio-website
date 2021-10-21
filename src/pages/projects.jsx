@@ -46,28 +46,20 @@ const ProjectsPage = ({ data }) => {
           <Typography variant="h4" style={{marginTop: 10}}>Projects Directory</Typography>
           <br />
           <hr />
-
           <Grid container spacing={2} style={{marginTop: 40}}>
             {
               data.allMdx.nodes.map((node) => (
                 <Grid item xs={12} sm={6} md={4} key={node.id}>
                   <Card className={styles.card}>
-
-
-
                     <CardActionArea>
-
                     <CardMedia component="div" >
                       <GatsbyImage
                         id="image"
-                        objectFit="cover"
                         image={getImage(node.frontmatter.image01)}
                         alt={node.frontmatter.image01_alt}
                       />
                     </CardMedia>
                       <CardContent>
-
-
                         <Typography variant="h5">
                           {node.frontmatter.title}
                         </Typography>
@@ -128,7 +120,7 @@ export const ProjectQuery = graphql`
         image01 {
               childImageSharp {
                   gatsbyImageData(
-                    width: 400
+                    width: 500
                     height: 250
                     blurredOptions: {width: 100}
                     transformOptions: {cropFocus: CENTER}

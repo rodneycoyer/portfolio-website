@@ -1,7 +1,7 @@
 {
   "name": "rodney-coyer-portfolio",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "Rodney Coyer Portfolio",
   "author": "roofWalker",
   "keywords": [
