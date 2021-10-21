@@ -1,49 +1,133 @@
 import React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
-import { getImage, GatsbyImage } from "gatsby-plugin-image";
-import Seo from "../components/SeoComponent";
+
+import { Box, Card, CardActions, CardActionArea, CardContent, Container, Grid, IconButton, makeStyles, Typography } from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faDocker} from "@fortawesome/free-brands-svg-icons/faDocker"
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faExpand } from "@fortawesome/free-solid-svg-icons";
+
 import Layout from "../components/LayoutComponent";
-import { Box, Card, CardContent, CardMedia, CardActionArea, Container, CssBaseline, Grid, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import Seo from "../components/SeoComponent";
 
 const useStyles = makeStyles((theme) => ({
   link: {
-    marginTop: 5,
     textDecoration: "none",
     color: "white",
-        "&:hover": {
-        color: "#d50000"
+    "&:hover": {
+        color: '#d50000'
     },
   },
-  heading: {
-    marginTop: 150,
-    marginBottom: 15
-  },
   card: {
-    maxWidth: 345,
-    marginBottom: 25,
+  },
+  pageLink: {
+    marginRight: "auto"
   }
-  
-}));
+}))
 
 const ProjectsPage = ({ data }) => {
+
   const styles = useStyles();
-    return (
-      <Layout>
-        <Seo title="projects" />
+
+  return (
+    <Layout>
+      <Seo title="projects" />
+      <Box px={{ xs: 3, sm: 5 }} py={{ xs: 15, sm: 15 }} >
         <Container maxWidth="lg">
-            <Typography variant="h4" className={styles.heading}> Projects and Labs </Typography>
-            <Box>
-              <Link to="/" className={styles.link}> Home </Link>
-            </Box>
-            <hr />
-            <p>below are some of the latests projects and experiments</p>
-            <Grid container align="center">
-              
-            </Grid>
+          <Link
+            to="/"
+            variant="button"
+            className={styles.link}
+          >
+            Home
+          </Link>
+          <Typography variant="h4" style={{marginTop: 10}}>Projects Directory</Typography>
+          <br />
+          <hr />
+
+          <Grid container spacing={2} style={{marginTop: 40}}>
+            {
+              data.allMdx.nodes.map((node) => (
+                <Grid item xs={12} sm={6} md={4} key={node.id}>
+                  <Card className={styles.card}>
+                    <CardActionArea>
+                      <CardContent>
+                        <Typography variant="h5">
+                          {node.frontmatter.title}
+                        </Typography>
+                        <Typography variant="body" color="secondary">
+                          {node.frontmatter.short_description}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions disableSpacing>
+                      <Box style={{marginRight:"auto"}}>
+                        <Link href={node.frontmatter.github}>
+                          <IconButton>
+                            <FontAwesomeIcon icon={faGithub} size="sm" />
+                          </IconButton>
+                        </Link>
+                        <Link href={node.frontmatter.dockerHub}>
+                          <IconButton>
+                            <FontAwesomeIcon icon={faDocker} size="sm" />
+                          </IconButton>
+                        </Link>
+                      </Box>
+                      <Box >
+                        <Link to={`/projects/{node.slug}`}>
+                          <IconButton style={{justifySelf:"end"}} >
+                            <FontAwesomeIcon icon={faExpand} size="sm" />
+                          </IconButton>
+                        </Link>
+                      </Box>
+                    </CardActions>
+                  </Card>
+                </Grid>
+              ))
+            }
+          </Grid>
         </Container>
-      </Layout>
-    );
+      </Box>
+    </Layout>
+  )
 }
+
+export const ProjectQuery = graphql`
+  query {
+  allMdx {
+    nodes {
+      frontmatter {
+        title
+        website
+        github
+        dockerHub
+        role
+        context
+        year
+        stack
+        short_description
+        full_description
+        lessons_learned
+        image01_alt
+        image01 {
+              childImageSharp {
+                  gatsbyImageData(
+                    width: 250
+                    height: 250
+                    blurredOptions: {width: 100}
+                    transformOptions: {cropFocus: CENTER}
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+              }
+          }
+      }
+      id
+      slug
+    }
+  }
+}
+`
 
 export default ProjectsPage;
