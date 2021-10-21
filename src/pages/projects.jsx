@@ -2,7 +2,7 @@ import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
 
-import { Box, Card, CardActions, CardActionArea, CardContent, Container, Grid, IconButton, makeStyles, Typography } from "@material-ui/core";
+import { Box, Card, CardActions, CardActionArea, CardContent, Container, Grid, IconButton, makeStyles, Typography, CardMedia } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faDocker} from "@fortawesome/free-brands-svg-icons/faDocker"
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   card: {
+    overflow: "hidden",
   },
   pageLink: {
     marginRight: "auto"
@@ -51,8 +52,22 @@ const ProjectsPage = ({ data }) => {
               data.allMdx.nodes.map((node) => (
                 <Grid item xs={12} sm={6} md={4} key={node.id}>
                   <Card className={styles.card}>
+
+
+
                     <CardActionArea>
+
+                    <CardMedia component="div" >
+                      <GatsbyImage
+                        id="image"
+                        objectFit="cover"
+                        image={getImage(node.frontmatter.image01)}
+                        alt={node.frontmatter.image01_alt}
+                      />
+                    </CardMedia>
                       <CardContent>
+
+
                         <Typography variant="h5">
                           {node.frontmatter.title}
                         </Typography>
@@ -113,7 +128,7 @@ export const ProjectQuery = graphql`
         image01 {
               childImageSharp {
                   gatsbyImageData(
-                    width: 250
+                    width: 400
                     height: 250
                     blurredOptions: {width: 100}
                     transformOptions: {cropFocus: CENTER}
