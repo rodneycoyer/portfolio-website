@@ -8,8 +8,7 @@ import {faDocker} from "@fortawesome/free-brands-svg-icons/faDocker"
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
 
-import Layout from "../components/LayoutComponent";
-import Seo from "../components/SeoComponent";
+import Layout from "../../components/LayoutComponent";
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -27,13 +26,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const ProjectsPage = ({ data }) => {
+const ProjectIndex = ({ data }) => {
 
   const styles = useStyles();
 
   return (
     <Layout>
-      <Seo title="projects" />
       <Box px={{ xs: 3, sm: 5 }} py={{ xs: 15, sm: 15 }} >
         <Container maxWidth="lg">
           <Link
@@ -82,7 +80,7 @@ const ProjectsPage = ({ data }) => {
                         </Link>
                       </Box>
                       <Box >
-                        <Link to={`/projects/{node.slug}`}>
+                        <Link to={`/projects/${node.slug}`}>
                           <IconButton style={{justifySelf:"end"}} >
                             <FontAwesomeIcon icon={faExpand} size="sm" />
                           </IconButton>
@@ -137,4 +135,4 @@ export const ProjectQuery = graphql`
 }
 `
 
-export default ProjectsPage;
+export default ProjectIndex;

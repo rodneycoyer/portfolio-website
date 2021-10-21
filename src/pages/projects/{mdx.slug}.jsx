@@ -5,12 +5,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Box, Container } from "@material-ui/core";
 
 import Layout from "../../components/LayoutComponent";
-import Seo from "../components/SeoComponent";
 
 const FeaturedProject = ({ data }) => {
     return (
         <Layout>
-            <Seo pageTitle="" />
             <h1>Content will go here</h1>
             <Box px={{ xs: 3, sm: 5 }} py={{ xs: 15, sm: 15 }} >
                 <Container maxWidth="lg">
