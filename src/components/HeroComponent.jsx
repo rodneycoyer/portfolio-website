@@ -33,10 +33,11 @@ const useStyles = makeStyles((theme) => ({
       position: "absolute",
       zIndex: 2,
   },
-  heroImage: {
+  hero_image: {
       height: "90vh",
       width: "100%",
       zIndex: 1,
+      position: "absolute"
   },
 }));
 
@@ -47,10 +48,9 @@ export default function HeroSection() {
   return (
     <Paper className={styles.section}>
       <StaticImage
-        className={styles.heroImage}
+        className={styles.hero_image}
         src="../images/header-background.jpg"
         alt="silhouette of a person walking on beach, during sunset, at Ruby Beach, Wa"
-        style={{ position: "absolute" }}
       />
       <div className={styles.overlay}></div>
       <Container className={styles.container} maxWidth="md">
