@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         margin: 5,
         color: "#b2ff59",
         "&:hover": {
-            color: "#9fa8da"
+        color: "#9fa8da"
         }
     }
 }));

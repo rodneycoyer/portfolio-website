@@ -13,7 +13,6 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import { StaticImage } from "gatsby-plugin-image";
 import Typewriter from "typewriter-effect";
 
-
 const useStyles = makeStyles((theme) => ({
   section: {
       height: "90vh",
@@ -73,7 +72,7 @@ export default function HeroSection() {
                       .typeString('My name is Rodney.')
                       .pauseFor(1000)
                       .typeString(`<br /> I'm a <span style="color: #DC143C;"> problem solver...</span>`)
-                      .pauseFor(1000)
+                      .pauseFor(700)
                       .deleteChars(20)
                       .typeString('<span style="color: #00BFFF;">creative...</span>')
                       .pauseFor(1000)
