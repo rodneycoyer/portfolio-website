@@ -1,24 +1,11 @@
 import React from "react";
-import Link from "@material-ui/core/Link"
-import { AppBar, Container, makeStyles, Slide, Toolbar, useScrollTrigger } from "@material-ui/core/";
-
-const navigationLinks = [
-    {id: 0, name: "about", href: "/"},
-    {id: 0, name: "projects", href: "/projects"},
-    {id: 1, name: "contact", href: "/"},
-];
-
-const useStyles = makeStyles((theme) => ({
-    link: {
-        marginRight: 30,
-        "&:hover": {
-            color: '#d50000'
-        },
-    }
-}));
+import {
+    AppBar, Container,
+    Slide, Toolbar, useScrollTrigger
+} from "@material-ui/core/";
+import NavBarModal from "./NavBarModalComponent";
 
 const NavBar = () => {
-    const styles = useStyles();
     const trigger = useScrollTrigger();
 
     return (
@@ -26,17 +13,7 @@ const NavBar = () => {
             <AppBar position="sticky" color="default">
                 <Container maxWidth="md">
                     <Toolbar disableGutters>
-                        {navigationLinks.map((item) => (
-                            <Link
-                                className={styles.link}
-                                color="textPrimary"
-                                variant="button"
-                                underline="none"
-                                href={item.href}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                        <NavBarModal />
                     </Toolbar>
                 </Container>
             </AppBar>
