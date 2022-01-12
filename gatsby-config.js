@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -34,14 +35,6 @@ module.exports = {
         theme_color: `#20232a`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`
-      },
-    },
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
       },
     },
   ],
