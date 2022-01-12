@@ -1,12 +1,16 @@
 
 import React from "react";
 import { Link } from "gatsby";
-import {
-    Backdrop, Box, Button,
-  Modal, Fade, makeStyles,
+import { Backdrop, Box, Button, Modal, Fade, makeStyles,
   Grid, Typography, Slide, IconButton
 } from "@material-ui/core";
 import ExploreOutlinedIcon from "@material-ui/icons/ExploreOutlined";
+
+const navigationLinks = [
+  {id: 0, name: "about", href: "/"},
+  {id: 1, name: "projects", href: "/projects"},
+  {id: 2, name: "contact", href: "/"},
+];
 
 const styleModal = {
   position: "absolute",
@@ -33,12 +37,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const navigationLinks = [
-  {id: 0, name: "about", href: "/"},
-  {id: 1, name: "projects", href: "/projects"},
-  {id: 2, name: "contact", href: "/"},
-];
-
 export default function NavBarModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -64,8 +62,9 @@ export default function NavBarModal() {
         <Fade in={open}>
           <Box
             sx={styleModal}
+            ref={containerRef}
           >
-            <Grid container direction="column" ref={containerRef}>
+            <Grid container direction="column" >
               {navigationLinks.map((item) => (
                 <Link
                   className={styles.link}
@@ -78,7 +77,7 @@ export default function NavBarModal() {
                     in={open}
                     container={containerRef.current}
                     direction="up"
-                    timeout={{enter: 250}}
+                    timeout={{enter: 350}}
                   >
                     <Grid item>
                       <Button

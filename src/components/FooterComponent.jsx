@@ -68,7 +68,7 @@ const Footer = () => {
                                 </IconButton>
                             </Link>
                             <Box pb={{ xs: 2 }}>
-                                Powered by <FontAwesomeIcon icon={faReact} /> Gatsby
+                                Powered with <FontAwesomeIcon icon={faReact} /> Gatsby
                                 <br />
                                 © rodneycoyer {new Date().getFullYear()}
                             </Box>

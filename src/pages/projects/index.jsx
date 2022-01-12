@@ -41,7 +41,7 @@ const ProjectIndex = ({ data }) => {
           >
             Home
           </Link>
-          <Typography variant="h4" style={{marginTop: 10}}>Projects Directory</Typography>
+          <Typography variant="h4" style={{marginTop: 10}}>Project Directory</Typography>
           <br />
           <hr />
           <Grid container spacing={2} style={{marginTop: 40}}>

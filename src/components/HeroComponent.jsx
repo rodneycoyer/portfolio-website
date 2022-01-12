@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Paper from "@material-ui/core/Paper";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
-import Social from "./SocialComponent";
-import Hidden from "@material-ui/core/Hidden";
-import Zoom from "@material-ui/core/Zoom";
+import {
+  Button, Box, Container, Grid, Grow, Hidden,
+  makeStyles, Paper, Typography, Zoom
+} from "@material-ui/core/";
 import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import { StaticImage } from "gatsby-plugin-image";
 import Typewriter from "typewriter-effect";
+import Social from "./SocialComponent";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -44,6 +39,7 @@ export default function HeroSection() {
   const styles = useStyles();
   const [shouldShow, setShouldShow] = useState(false);
   useEffect(() => setShouldShow(true), []);
+
   return (
     <Paper className={styles.section}>
       <StaticImage
@@ -95,9 +91,11 @@ export default function HeroSection() {
             </Grid>
           </Zoom>
           <Hidden smDown>
-            <Grid item>
-              <Social direction="column" />
-            </Grid>
+            <Grow in={shouldShow} timeout={{enter: 2500}}>
+              <Grid item>
+                <Social direction="column" />
+              </Grid>
+            </Grow>
           </Hidden>
         </Grid>
       </Container>
