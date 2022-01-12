@@ -1,8 +1,12 @@
-import React from "react";
+import * as React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import { Box, Container, Grid, makeStyles, Paper } from "@material-ui/core";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import { makeStyles } from "@mui/styles";
+import Paper from "@mui/material/Paper";
 
 import Layout from "../../components/LayoutComponent";
 

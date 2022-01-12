@@ -1,17 +1,27 @@
 
-import React from "react";
+import * as React from "react";
 import { Link } from "gatsby";
-import { Backdrop, Box, Button, Modal, Fade, makeStyles,
-  Grid, Typography, Slide, IconButton
-} from "@material-ui/core";
-import ExploreOutlinedIcon from "@material-ui/icons/ExploreOutlined";
 
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Fade from "@mui/material/Fade";
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
+import { makeStyles } from "@mui/styles";
+import Modal from "@mui/material/Modal";
+import Slide from "@mui/material/Slide";
+import Typography from "@mui/material/Typography";
+
+import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
+
+// use gatsby for internal linking
 const navigationLinks = [
   {id: 0, name: "about", href: "/"},
   {id: 1, name: "projects", href: "/projects"},
   {id: 2, name: "contact", href: "/"},
 ];
-
+// nav modal
 const styleModal = {
   position: "absolute",
   top: "50%",
@@ -24,7 +34,7 @@ const styleModal = {
   boxShadow: 24,
   p: 2,
 };
-
+// nav link containers
 const useStyles = makeStyles((theme) => ({
   link: {
     marginLeft: 20,

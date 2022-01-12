@@ -1,8 +1,13 @@
-import React from "react";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from "@material-ui/icons/Twitter";
-import { IconButton, Link, Grid, makeStyles } from "@material-ui/core";
+import * as React from "react";
+
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
+import Link from "@mui/material/Link";
+import { makeStyles } from "@mui/styles";
+
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from "@mui/icons-material/Twitter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";

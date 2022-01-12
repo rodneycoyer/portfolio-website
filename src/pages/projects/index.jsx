@@ -1,10 +1,21 @@
-import React from "react";
+import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
 
-import { Box, Card, CardActions, CardActionArea, CardContent, Container, Grid, IconButton, makeStyles, Typography, CardMedia } from "@material-ui/core";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
+import { makeStyles } from "@mui/styles";
+import Typography from "@mui/material/Typography";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faDocker} from "@fortawesome/free-brands-svg-icons/faDocker"
+import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker"
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
 

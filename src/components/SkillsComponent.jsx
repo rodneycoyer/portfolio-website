@@ -1,13 +1,32 @@
-import React from "react";
-import { Box, CardContent, Container, Grid, Icon, makeStyles, Typography } from "@material-ui/core";
+import * as React from "react";
+
+import Box from "@mui/material/Box";
+import CardContent from "@mui/material/CardContent";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
+import { makeStyles } from "@mui/styles";
+import Typography from "@mui/material/Typography";
+// fa brand icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faReact} from "@fortawesome/free-brands-svg-icons/faReact"
-import {faDocker} from "@fortawesome/free-brands-svg-icons/faDocker"
-import {faNodeJs} from "@fortawesome/free-brands-svg-icons/faNodeJs"
-import {faHtml5} from "@fortawesome/free-brands-svg-icons/faHtml5"
-import {faAws} from "@fortawesome/free-brands-svg-icons/faAws"
-import {faBootstrap} from "@fortawesome/free-brands-svg-icons/faBootstrap"
-import { faCloud,faDatabase, faServer, faSearch, faLock, faFingerprint, faPassport } from "@fortawesome/free-solid-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
+import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
+import { faNodeJs } from "@fortawesome/free-brands-svg-icons/faNodeJs";
+import { faHtml5 } from "@fortawesome/free-brands-svg-icons/faHtml5";
+import { faAws } from "@fortawesome/free-brands-svg-icons/faAws";
+import { faBootstrap } from "@fortawesome/free-brands-svg-icons/faBootstrap";
+// fa icons
+import { faCloud } from "@fortawesome/free-solid-svg-icons/faCloud";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons/faDatabase";
+import { faServer } from "@fortawesome/free-solid-svg-icons/faServer";
+import { faSearch } from "@fortawesome/free-solid-svg-icons/faSearch";
+import { faLock } from "@fortawesome/free-solid-svg-icons/faLock";
+import { faFingerprint } from "@fortawesome/free-solid-svg-icons/faFingerprint";
+import { faPassport } from "@fortawesome/free-solid-svg-icons/faPassport";
+
+
+
+
 
 const useStyles = makeStyles((theme) => ({
     icon: {

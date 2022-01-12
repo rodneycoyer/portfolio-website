@@ -1,8 +1,11 @@
-import React from "react";
-import {
-    AppBar, Container,
-    Slide, Toolbar, useScrollTrigger
-} from "@material-ui/core/";
+import * as React from "react";
+
+import AppBar from "@mui/material/AppBar";
+import Container from "@mui/material/Container";
+import Slide from "@mui/material/Slide";
+import Toolbar from "@mui/material/Toolbar";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+
 import NavBarModal from "./NavBarModalComponent";
 
 const NavBar = () => {

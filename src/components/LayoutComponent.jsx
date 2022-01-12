@@ -1,16 +1,16 @@
-import React from "react";
+import * as React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { CssBaseline } from "@material-ui/core";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from "@mui/material/CssBaseline"
+
 import NavBar from "./NavBarComponent";
 import Footer from "./FooterComponent";
 
 const darkTheme = createTheme({
-    palette: {
-        type: "dark"
-    }
+  palette: {
+    mode: 'dark',
+  },
 });
-
 
 const Layout = ({children}) => (
     <StaticQuery
@@ -27,10 +27,11 @@ const Layout = ({children}) => (
         render={data => (
             <React.Fragment>
                 <ThemeProvider theme={darkTheme}>
-                    <CssBaseline />
+                    <CssBaseline enableColorScheme>
                     <NavBar />
                         <main>{children}</main>
-                    <Footer />
+                        <Footer />
+                        </CssBaseline>
                 </ThemeProvider>
             </React.Fragment>
         )}

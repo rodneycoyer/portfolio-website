@@ -1,13 +1,21 @@
-import React from "react";
-import { Box, Container, Grid, Link, IconButton, makeStyles } from "@material-ui/core";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from "@material-ui/icons/Twitter";
-import MailOutlineIcon from "@material-ui/icons/MailOutline"
+import * as React from "react";
+
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton"
+import Link from "@mui/material/Link";
+import { makeStyles } from "@mui/styles";
+
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
-import { faCodepen } from "@fortawesome/free-brands-svg-icons";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { faCodepen } from "@fortawesome/free-brands-svg-icons/faCodepen";
+import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
 
 
 const useStyles = makeStyles((theme) => ({
