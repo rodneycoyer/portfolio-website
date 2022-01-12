@@ -1,10 +1,12 @@
+
 import React from "react";
 import { Link } from "gatsby";
 import {
     Backdrop, Box, Button,
   Modal, Fade, makeStyles,
-  Grid, Typography, Slide
+  Grid, Typography, Slide, IconButton
 } from "@material-ui/core";
+import ExploreOutlinedIcon from "@material-ui/icons/ExploreOutlined";
 
 const styleModal = {
   position: "absolute",
@@ -14,8 +16,9 @@ const styleModal = {
   width: 450,
   bgcolor: "black",
   border: "2px solid #000",
+  borderRadius: "10px",
   boxShadow: 24,
-  p: 4,
+  p: 2,
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -44,8 +47,10 @@ export default function NavBarModal() {
   const styles = useStyles();
 
   return (
-    <div>
-      <Button onClick={handleOpen}> Menu </Button>
+    <div style={{marginLeft: "auto"}}>
+      <IconButton onClick={handleOpen}>
+        <ExploreOutlinedIcon fontSize="large" color="secondary"/>
+      </IconButton>
       <Modal
         open={open}
         onClose={handleClose}
@@ -59,40 +64,39 @@ export default function NavBarModal() {
         <Fade in={open}>
           <Box
             sx={styleModal}
-            style={{ borderRadius: 8 }}
-            ref={containerRef}
           >
-              <Grid container direction="column" spacing={4}>
-                  {navigationLinks.map((item) => (
-                    <Link
-                      className={styles.link}
-                      color="textPrimary"
-                      variant="button"
-                      underline="none"
-                      href={item.href}
-                    >
-                      <Slide
-                        in={open}
-                        direction="up"
-                        container={containerRef.current}
+            <Grid container direction="column" ref={containerRef}>
+              {navigationLinks.map((item) => (
+                <Link
+                  className={styles.link}
+                  color="textPrimary"
+                  variant="button"
+                  underline="none"
+                  href={item.href}
+                >
+                  <Slide
+                    in={open}
+                    container={containerRef.current}
+                    direction="up"
+                    timeout={{enter: 250}}
+                  >
+                    <Grid item>
+                      <Button
+                        variant="outlined"
+                        color="secondary"
+                        size="large"
+                        fullWidth
+                        style={{padding: 30}}
                       >
-                        <Grid item>
-                          <Button
-                            variant="outlined"
-                            color="secondary"
-                            size="large"
-                            fullWidth
-                            style={{padding: 30}}
-                          >
-                            <Typography variant="button-text" component="h1">
-                              {item.name}
-                            </Typography>
-                          </Button>
-                        </Grid>
-                      </Slide>
-                    </Link>
-                  ))}
-              </Grid>
+                        <Typography variant="button-text" component="h1">
+                          {item.name}
+                        </Typography>
+                      </Button>
+                    </Grid>
+                  </Slide>
+                </Link>
+              ))}
+            </Grid>
 			    </Box>
         </Fade>
       </Modal>
