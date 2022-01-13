@@ -27,11 +27,10 @@ const Layout = ({children}) => (
         render={data => (
             <React.Fragment>
                 <ThemeProvider theme={darkTheme}>
-                    <CssBaseline enableColorScheme>
+                    <CssBaseline enableColorScheme />
                     <NavBar />
                         <main>{children}</main>
                         <Footer />
-                        </CssBaseline>
                 </ThemeProvider>
             </React.Fragment>
         )}
