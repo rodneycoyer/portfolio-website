@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { Link } from "gatsby";
 
@@ -13,7 +12,7 @@ import Modal from "@mui/material/Modal";
 import Slide from "@mui/material/Slide";
 import Typography from "@mui/material/Typography";
 
-import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
+import ArchitectureIcon from '@mui/icons-material/Architecture';
 
 // use gatsby for internal linking
 const navigationLinks = [
@@ -41,10 +40,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 25,
     marginRight: 20,
     marginBottom: 25,
-    "&:hover": {
-        color: "#d50000"
-    },
-  }
+  },
 }));
 
 export default function NavBarModal() {
@@ -57,7 +53,7 @@ export default function NavBarModal() {
   return (
     <div style={{marginLeft: "auto"}}>
       <IconButton onClick={handleOpen}>
-        <ExploreOutlinedIcon fontSize="large" color="secondary"/>
+        <ArchitectureIcon fontSize="large" color="primary"/>
       </IconButton>
       <Modal
         open={open}
@@ -72,13 +68,15 @@ export default function NavBarModal() {
         <Fade in={open}>
           <Box
             sx={styleModal}
-            ref={containerRef}
           >
-            <Grid container direction="column" >
+            <Grid
+              container
+              direction="column"
+              ref={containerRef}
+            >
               {navigationLinks.map((item) => (
                 <Link
                   className={styles.link}
-                  color="textPrimary"
                   variant="button"
                   underline="none"
                   href={item.href}
@@ -91,10 +89,9 @@ export default function NavBarModal() {
                   >
                     <Grid item>
                       <Button
-                        variant="outlined"
-                        color="secondary"
-                        size="large"
                         fullWidth
+                        size="large"
+                        variant="outlined"
                         style={{padding: 30}}
                       >
                         <Typography variant="button-text" component="h1">

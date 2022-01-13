@@ -24,13 +24,10 @@ import { faLock } from "@fortawesome/free-solid-svg-icons/faLock";
 import { faFingerprint } from "@fortawesome/free-solid-svg-icons/faFingerprint";
 import { faPassport } from "@fortawesome/free-solid-svg-icons/faPassport";
 
-
-
-
-
 const useStyles = makeStyles((theme) => ({
     icon: {
         margin: 5,
+        paddingBottom: 40,
         color: "#b2ff59",
         "&:hover": {
         color: "#9fa8da"
@@ -47,16 +44,15 @@ const SkillsPage = () => {
                 <Typography variant="h4" align="center" color="textSecondary">
                     Skills && Tech
                 </Typography>
-                <br/>
                 <Grid container spacing={2} align="center">
                     <Grid item xs={6} sm={4}>
                         <Box sx={{maxWidth: 250}} >
-                            <CardContent >
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faHtml5} size="2x" />
+                            <CardContent>
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faHtml5}/>
                                 </Icon>
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faBootstrap} size="2x" />
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faBootstrap} />
                                 </Icon>
                                 <Typography variant="h6" component="h2">
                                     HTML / CSS
@@ -70,20 +66,20 @@ const SkillsPage = () => {
                     <Grid item xs={6} sm={4}>
                         <Box sx={{maxWidth: 250}} >
                             <CardContent >
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faServer} size="lg" />
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faServer} />
                                 </Icon>
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faReact} size="2x" />
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faReact} />
                                 </Icon>
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faNodeJs} size="lg" />
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faNodeJs} />
                                 </Icon>
                                 <Typography variant="h6" component="h2">
                                     JavaScript
                                 </Typography>
                                 <Typography variant="body2">
-                                    React, React Native, Gatsby, Node, Express
+                                    React, React Native, Gatsby, Node, Express, ES5, ES6
                                 </Typography>
                             </CardContent>
                         </Box>
@@ -91,16 +87,16 @@ const SkillsPage = () => {
                     <Grid item xs={6} sm={4}>
                         <Box sx={{maxWidth: 250}} >
                             <CardContent >
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faCloud} size="lg" />
+                                <Icon fontSize="large" className={styles.icon} style={{paddingRight: 50}}>
+                                    <FontAwesomeIcon icon={faCloud} />
                                 </Icon>
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faDatabase} size="2x" />
+                                <Icon fontSize="large" className={styles.icon} style={{paddingRight: 10}}>
+                                    <FontAwesomeIcon icon={faDatabase} />
                                 </Icon>
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faAws} size="lg" />
+                                <Icon fontSize="large" className={styles.icon} style={{paddingRight: 50}}>
+                                    <FontAwesomeIcon icon={faAws} />
                                 </Icon>
-                                <Typography variant="h6" component="h2">
+                                <Typography variant="h6">
                                     Databases
                                 </Typography>
                                 <Typography variant="body2">
@@ -112,8 +108,8 @@ const SkillsPage = () => {
                     <Grid item xs={6} sm={4}>
                         <Box sx={{maxWidth: 250}} >
                             <CardContent >
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faSearch} size="2x" />
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faSearch} />
                                 </Icon>
                                 <Typography variant="h6" component="h2">
                                     Query
@@ -127,8 +123,8 @@ const SkillsPage = () => {
                     <Grid item xs={6} sm={4}>
                         <Box sx={{maxWidth: 250}} >
                             <CardContent >
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faDocker} size="2x" />
+                                <Icon fontSize="large" className={styles.icon} style={{paddingRight: 50, paddingLeft: 10}}>
+                                    <FontAwesomeIcon icon={faDocker} />
                                 </Icon>
                                 <Typography variant="h6" component="h2">
                                     DevOps
@@ -142,14 +138,14 @@ const SkillsPage = () => {
                     <Grid item xs={6} sm={4}>
                         <Box sx={{maxWidth: 250}} >
                             <CardContent >
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faPassport} size="lg" style={{margin: 5}} />
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faPassport} />
                                 </Icon>
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faLock} size="2x" style={{margin: 5}} />
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faLock} />
                                 </Icon>
-                                <Icon color="secondary" className={styles.icon}>
-                                    <FontAwesomeIcon icon={faFingerprint} size="lg" style={{margin: 5}} />
+                                <Icon fontSize="large" className={styles.icon}>
+                                    <FontAwesomeIcon icon={faFingerprint} />
                                 </Icon>
                                 <Typography variant="h6" component="h2">
                                     Other Tools

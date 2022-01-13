@@ -14,7 +14,7 @@ import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = makeStyles((theme) => ({
     icon: {
-        color: "#d50000",
+        color: "#8561c5",
         "&:hover": {
             color: "#ffcdd2"
         }

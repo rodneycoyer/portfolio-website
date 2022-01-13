@@ -5,7 +5,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton"
 import Link from "@mui/material/Link";
-import { makeStyles } from "@mui/styles";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -17,71 +16,68 @@ import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
 import { faCodepen } from "@fortawesome/free-brands-svg-icons/faCodepen";
 import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
 
-
-const useStyles = makeStyles((theme) => ({
-    icon: {
-        color: "#9fa8da",
-        "&:hover": {
-            color: "#e8eaf6"
-        },
-    },
-    space: {
-        marginRight: 20,
-        marginLeft: 20,
-        marginBottom: 15,
-    }
-}))
-
 const Footer = () => {
-    const styles = useStyles();
     return (
         <footer>
             <Box
                 sx={{ display: "flex" }}
                 p={{ xs: 3 }}
-                bgcolor="black"
                 textAlign="center"
             >
-                <Container>
-                    <Grid container alignItems="center">
-                        <Grid item xs={12}>
+                <Container >
+                    <Grid
+                        container
+                        spacing={4}
+                        justifyContent="center"
+                    >
+                        <Grid item>
                             <Link href="https://www.linkedin.com/in/rodney-coyer-b2922b72/">
-                                <IconButton className={styles.space}>
-                                    <LinkedInIcon color="primary" className={styles.icon} />
+                                <IconButton>
+                                    <LinkedInIcon />
                                 </IconButton>
                             </Link>
+                        </Grid>
+                        <Grid item>
                             <Link href="https://github.com/roofwalker">
-                                <IconButton className={styles.space}>
-                                    <GitHubIcon color="primary" className={styles.icon} />
+                                <IconButton>
+                                    <GitHubIcon />
                                 </IconButton>
                             </Link>
+                        </Grid>
+                        <Grid item>
                             <Link href="https://codepen.io/roofwalker">
-                                <IconButton className={styles.space}>
-                                    <FontAwesomeIcon icon={faCodepen}  className={styles.icon} />
+                                <IconButton>
+                                    <FontAwesomeIcon icon={faCodepen} />
                                 </IconButton>
                             </Link>
+                        </Grid>
+                        <Grid item>
                             <Link href="">
-                                <IconButton className={styles.space}>
-                                    <FontAwesomeIcon icon={faDocker} className={styles.icon} />
+                                <IconButton>
+                                    <FontAwesomeIcon icon={faDocker} />
                                 </IconButton>
                             </Link>
+                        </Grid>
+                        <Grid item>
                             <Link href="">
-                                <IconButton className={styles.space}>
-                                    <TwitterIcon className={styles.icon} />
+                                <IconButton>
+                                    <TwitterIcon />
                                 </IconButton>
                             </Link>
+                        </Grid>
+                        <Grid item>
                             <Link href="">
-                                <IconButton className={styles.space}>
-                                    <MailOutlineIcon className={styles.icon} />
+                                <IconButton>
+                                    <MailOutlineIcon />
                                 </IconButton>
                             </Link>
-                            <Box pb={{ xs: 2 }}>
-                                Powered with <FontAwesomeIcon icon={faReact} /> Gatsby
-                                <br />
-                                © rodneycoyer {new Date().getFullYear()}
-                            </Box>
                         </Grid>
                     </Grid>
+                    <Box p={{ xs: 2 }}>
+                        Powered with <FontAwesomeIcon icon={faReact} /> Gatsby
+                        <br />
+                        © rodneycoyer {new Date().getFullYear()}
+                    </Box>
                 </Container>
             </Box>
         </footer>
