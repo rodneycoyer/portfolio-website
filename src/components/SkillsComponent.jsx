@@ -44,7 +44,7 @@ const SkillsPage = () => {
                 <Typography variant="h4" align="center" color="textSecondary">
                     Skills && Tech
                 </Typography>
-                <Grid container spacing={2} align="center">
+                <Grid container spacing={1} align="center">
                     <Grid item xs={6} sm={4}>
                         <Box sx={{maxWidth: 250}} >
                             <CardContent>
@@ -97,10 +97,10 @@ const SkillsPage = () => {
                                     <FontAwesomeIcon icon={faAws} />
                                 </Icon>
                                 <Typography variant="h6">
-                                    Databases
+                                    Cloud Services
                                 </Typography>
                                 <Typography variant="body2">
-                                    MongoDB, Firebase
+                                    AWS, Netlify, Firebase
                                 </Typography>
                             </CardContent>
                         </Box>
@@ -112,7 +112,7 @@ const SkillsPage = () => {
                                     <FontAwesomeIcon icon={faSearch} />
                                 </Icon>
                                 <Typography variant="h6" component="h2">
-                                    Query
+                                    Query & Databases
                                 </Typography>
                                 <Typography variant="body2">
                                     REST, GraphQl
@@ -151,7 +151,7 @@ const SkillsPage = () => {
                                     Other Tools
                                 </Typography>
                                 <Typography variant="body2">
-                                    OAuth 2.0, JWT, Passport, Redux
+                                    OAuth 2.0, JWT, Passport, Redux, Axios
                                 </Typography>
                             </CardContent>
                         </Box>
