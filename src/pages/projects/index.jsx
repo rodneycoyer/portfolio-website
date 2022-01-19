@@ -11,8 +11,10 @@ import CardMedia from "@mui/material/CardMedia";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider"
 import Grid from "@mui/material/Grid";
+import Grow from "@mui/material/Grow"
 import IconButton from "@mui/material/IconButton";
 import { makeStyles } from "@mui/styles";
+import Slide from "@mui/material/Slide"
 import Tab from "@mui/material/Tab"
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
@@ -88,37 +90,44 @@ function RenderProjectCard({ data, node }) {
 }
 
 export default function ProjectIndex({data}) {
-  const styles = useStyles();
 
   const [tabValue, setTabValue] = React.useState(0);
+
+  const containerRef = React.useRef(null);
 
   const handleChange = (event, newTabValue) => {
     setTabValue(newTabValue);
   };
 
-  const directory = data.allMdx.nodes.map((node) => (
-    <Grid item xs={12} sm={6} md={4} key={node.id}>
-      <RenderProjectCard node={node} />
-    </Grid>
-  ));
+  const styles = useStyles();
 
-  const isOpenSource = data.allMdx.nodes
-    .filter((node => node.frontmatter.isOpenSource === "true"))
-    .map((node) => (
+  const directory = data.allMdx.nodes.map((node) => (
+    <Grow in={tabValue === 0} timeout={{enter: 450}}>
       <Grid item xs={12} sm={6} md={4} key={node.id}>
         <RenderProjectCard node={node} />
       </Grid>
-    ));
+    </Grow>
+  ));
 
   const learningProject = data.allMdx.nodes
     .filter((node => node.frontmatter.isOpenSource === "false"))
     .map((node) => (
-      <Grid item xs={12} sm={6} md={4} key={node.id}>
-        <RenderProjectCard node={node} />
-      </Grid>
+      <Slide in={tabValue === 1} container={containerRef.current} direction="right">
+        <Grid item xs={12} sm={6} md={4} key={node.id}>
+          <RenderProjectCard node={node} />
+        </Grid>
+      </Slide>
     ));
 
-  console.log(isOpenSource);
+  const isOpenSource = data.allMdx.nodes
+    .filter((node => node.frontmatter.isOpenSource === "true"))
+    .map((node) => (
+      <Slide in={tabValue === 2} container={containerRef.current} direction="right">
+        <Grid item xs={12} sm={6} md={4} key={node.id}>
+          <RenderProjectCard node={node} />
+        </Grid>
+      </Slide>
+    ));
 
   return (
     <Layout>
@@ -144,7 +153,7 @@ export default function ProjectIndex({data}) {
               <Tab label="open source" />
             </Tabs>
           </Box>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} ref={containerRef}>
             {tabValue === 0 && directory}
             {tabValue === 1 && learningProject}
             {tabValue === 2 && isOpenSource}

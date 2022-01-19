@@ -80,6 +80,7 @@ export default function NavBarModal() {
                   variant="button"
                   underline="none"
                   href={item.href}
+                  key={item.id}
                 >
                   <Slide
                     in={open}
