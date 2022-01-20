@@ -1,20 +1,15 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
 
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Grow from "@mui/material/Grow";
 import Hidden from "@mui/material/Hidden";
 import { makeStyles } from "@mui/styles";
 import Paper from "@mui/material/Paper";
-import Slide from "@mui/material/Slide";
 import Typography from "@mui/material/Typography";
 import Typewriter from "typewriter-effect";
-import Zoom from "@mui/material/Zoom";
 
 import Social from "./SocialComponent";
 
@@ -49,7 +44,6 @@ export default function HeroSection() {
   const styles = useStyles();
   const [shouldShow, setShouldShow] = useState(false);
   useEffect(() => setShouldShow(true), []);
-  const containerRef = React.useRef(null);
 
   return (
     <Paper className={styles.section}>
@@ -66,11 +60,13 @@ export default function HeroSection() {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Zoom in={shouldShow}>
-            <Grid item lg={9} >
-              <Typography component="h1" variant="h2">
+          <Grow in={shouldShow} timeout={{enter: 1500}}>
+            <Grid item md={12} lg={9} >
+
+              <Typography component="h1" variant="h2" color="text.primary">
                <em>Hi There and Welcome!</em>
               </Typography>
+
               <Typography component="div" variant="h3">
                 <Typewriter
                   onInit={(typewriter) => {
@@ -83,31 +79,9 @@ export default function HeroSection() {
                   }}
                 />
               </Typography>
-
-              <Box mt={3} ref={containerRef}>
-                  <Link
-                    to="/about"
-                    variant="button"
-                    underline="none"
-                  >
-                    <Slide
-                      in={shouldShow}
-                      direction="up"
-                      container={containerRef.current}
-                      timeout={{enter: 5000}}
-                    >
-                      <Button
-                        variant="outlined"
-                      >
-                        About Me
-                      </Button>
-                    </Slide>
-                  </Link>
-              </Box>
-
             </Grid>
-          </Zoom>
-          <Hidden smDown>
+          </Grow>
+          <Hidden lgDown>
             <Grow in={shouldShow} timeout={{enter: 6000}}>
               <Grid item>
                 <Social direction="column" />

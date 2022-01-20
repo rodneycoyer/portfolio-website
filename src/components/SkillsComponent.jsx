@@ -28,10 +28,13 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         margin: 5,
         paddingBottom: 40,
-        color: "#b2ff59",
+        color: "#42a5f5",
         "&:hover": {
         color: "#9fa8da"
         }
+    },
+    subHeading: {
+        color: "#ce93d8"
     }
 }));
 
@@ -39,11 +42,8 @@ const SkillsPage = () => {
     const styles = useStyles();
 
     return (
-        <Box px={{ xs: 3, sm: 5 }} py={{ xs: 5, sm: 5 }}>
+        <Box>
             <Container>
-                <Typography variant="h4" align="center" color="textSecondary">
-                    Skills && Tech
-                </Typography>
                 <Grid container spacing={1} align="center">
                     <Grid item xs={6} sm={4}>
                         <Box sx={{maxWidth: 250}} >
@@ -57,7 +57,7 @@ const SkillsPage = () => {
                                 <Typography variant="h6" component="h2">
                                     HTML / CSS
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography className={styles.subHeading} variant="body2">
                                     HTML5, CSS, Bootstrap, SASS, jQuery
                                 </Typography>
                             </CardContent>
@@ -78,7 +78,7 @@ const SkillsPage = () => {
                                 <Typography variant="h6" component="h2">
                                     JavaScript
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography variant="body2" className={styles.subHeading}>
                                     React, React Native, Gatsby, Node, Express, ES5, ES6
                                 </Typography>
                             </CardContent>
@@ -99,7 +99,7 @@ const SkillsPage = () => {
                                 <Typography variant="h6">
                                     Cloud Services
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography variant="body2" className={styles.subHeading}>
                                     AWS, Netlify, Firebase
                                 </Typography>
                             </CardContent>
@@ -114,7 +114,7 @@ const SkillsPage = () => {
                                 <Typography variant="h6" component="h2">
                                     Query & Databases
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography variant="body2" className={styles.subHeading}>
                                     REST, GraphQl
                                 </Typography>
                             </CardContent>
@@ -129,7 +129,7 @@ const SkillsPage = () => {
                                 <Typography variant="h6" component="h2">
                                     DevOps
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography variant="body2" className={styles.subHeading}>
                                     Docker
                                 </Typography>
                             </CardContent>
@@ -150,7 +150,7 @@ const SkillsPage = () => {
                                 <Typography variant="h6" component="h2">
                                     Other Tools
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography variant="body2" className={styles.subHeading}>
                                     OAuth 2.0, JWT, Passport, Redux, Axios
                                 </Typography>
                             </CardContent>

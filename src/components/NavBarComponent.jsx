@@ -1,4 +1,7 @@
 import * as React from "react";
+import { Link } from "gatsby";
+import FilterHdrOutlinedIcon from "@mui/icons-material/FilterHdrOutlined";
+import IconButton from "@mui/material/IconButton";
 
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
@@ -16,6 +19,14 @@ const NavBar = () => {
             <AppBar position="sticky" color="default">
                 <Container maxWidth="md">
                     <Toolbar disableGutters>
+                        <Link
+              to="/"
+              variant="button"
+          >
+              <IconButton color="primary">
+                <FilterHdrOutlinedIcon fontSize="large"/>
+              </IconButton>
+          </Link>
                         <NavBarModal />
                     </Toolbar>
                 </Container>

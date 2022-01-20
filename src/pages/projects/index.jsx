@@ -25,13 +25,14 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../../components/LayoutComponent";
+import SEO from "../../components/SeoComponent";
 
 const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
     color: "white",
     "&:hover": {
-      color: '#d50000'
+      color: '#f44336'
     },
   },
   card: {
@@ -99,8 +100,6 @@ export default function ProjectIndex({data}) {
     setTabValue(newTabValue);
   };
 
-  const styles = useStyles();
-
   const directory = data.allMdx.nodes.map((node) => (
     <Grow in={tabValue === 0} timeout={{enter: 450}}>
       <Grid item xs={12} sm={6} md={4} key={node.id}>
@@ -131,21 +130,26 @@ export default function ProjectIndex({data}) {
 
   return (
     <Layout>
-      <Box px={{ xs: 3, sm: 5 }} py={{ xs: 15, sm: 15 }} >
-        <Container maxWidth="lg">
-          <Link
-            to="/"
-            variant="button"
-            className={styles.link}
-          >
-            Home
-          </Link>
-
-          <Typography variant="h4" mt={2} mb={2}>
-            PROJECT BOARD
+      <SEO
+        title="projects"
+        keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `projects`]}
+      />
+      <Container maxWidth="lg">
+          <Box mt={4}>
+            <Typography
+              component={"h1"}
+            variant="h1"
+            align="center"
+              style={{color: "#f44336"}}
+              mt={8}
+              mb={8}
+            >
+            <strong> projects.map(feat)</strong>
           </Typography>
-          <Divider />
-
+          </Box>
+      </Container>
+      <Box>
+        <Container maxWidth="lg">
           <Box mt={2} mb={2}>
             <Tabs value={tabValue} onChange={handleChange} aria-label="project tabs">
               <Tab label="all"/>
