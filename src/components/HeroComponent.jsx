@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
@@ -10,10 +11,10 @@ import Grow from "@mui/material/Grow";
 import Hidden from "@mui/material/Hidden";
 import { makeStyles } from "@mui/styles";
 import Paper from "@mui/material/Paper";
+import Slide from "@mui/material/Slide";
 import Typography from "@mui/material/Typography";
-import Zoom from "@mui/material/Zoom";
 import Typewriter from "typewriter-effect";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import Zoom from "@mui/material/Zoom";
 
 import Social from "./SocialComponent";
 
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       height: "90vh",
   },
   overlay: {
-      background: "linear-gradient(105deg, black, transparent, black)",
+      background: "linear-gradient(100deg, black, transparent, black)",
       height: "90vh",
       width: "100%",
       position: "absolute",
@@ -48,6 +49,7 @@ export default function HeroSection() {
   const styles = useStyles();
   const [shouldShow, setShouldShow] = useState(false);
   useEffect(() => setShouldShow(true), []);
+  const containerRef = React.useRef(null);
 
   return (
     <Paper className={styles.section}>
@@ -64,43 +66,49 @@ export default function HeroSection() {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Zoom in={shouldShow} style={{ transitionDelay: shouldShow ? '700ms' : '0ms' }}>
-            <Grid item lg={9}>
+          <Zoom in={shouldShow}>
+            <Grid item lg={9} >
               <Typography component="h1" variant="h2">
-               <em>Hi There!!</em>
+               <em>Hi There and Welcome!</em>
               </Typography>
               <Typography component="div" variant="h3">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      .pauseFor(1000)
-                      .typeString('My name is Rodney.')
-                      .pauseFor(1000)
-                      .typeString(`<br /> I'm a <span style="color: #DC143C;"> problem solver...</span>`)
-                      .pauseFor(700)
-                      .deleteChars(20)
-                      .typeString('<span style="color: #00BFFF;">creative...</span>')
-                      .pauseFor(1000)
-                      .deleteChars(11)
-                      .typeString('a <span style="color: 	#DC143C;"> software engineer.</span>')
+                      .pauseFor(500)
+                      .typeString(`I'm Rod and this is my`)
+                      .pauseFor(350)
+                      .typeString('<br/><span style="color: #ff5722;"><strong> portfolio site.</strong></span>')
                       .start();
                   }}
                 />
               </Typography>
-              <Box my={3} gridColumn="span 3">
-                <Button
-                  href="mailto:rodney.coyer@gmail.com"
-                  variant="outlined"
-                  color="secondary"
-                  startIcon={<MailOutlineIcon />}
-                >
-                  Email Me
-                </Button>
+
+              <Box mt={3} ref={containerRef}>
+                  <Link
+                    to="/about"
+                    variant="button"
+                    underline="none"
+                  >
+                    <Slide
+                      in={shouldShow}
+                      direction="up"
+                      container={containerRef.current}
+                      timeout={{enter: 5000}}
+                    >
+                      <Button
+                        variant="outlined"
+                      >
+                        About Me
+                      </Button>
+                    </Slide>
+                  </Link>
               </Box>
+
             </Grid>
           </Zoom>
           <Hidden smDown>
-            <Grow in={shouldShow} timeout={{enter: 2500}}>
+            <Grow in={shouldShow} timeout={{enter: 6000}}>
               <Grid item>
                 <Social direction="column" />
               </Grid>

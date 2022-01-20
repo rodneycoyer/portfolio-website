@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/LayoutComponent";
-import Skills from "../components/SkillsComponent"
 import Seo from "../components/SeoComponent";
 import Hero from "../components/HeroComponent";
 
@@ -8,10 +7,9 @@ const IndexPage = () => (
   <Layout>
     <Seo
       title="Home"
-      keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`]}
+      keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `Home`]}
     />
     <Hero />
-    <Skills />
   </Layout>
 )
 

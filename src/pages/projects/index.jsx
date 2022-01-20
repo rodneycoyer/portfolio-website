@@ -66,16 +66,16 @@ function RenderProjectCard({ data, node }) {
       </CardActionArea>
       <CardActions disableSpacing>
         <Box style={{ marginRight: "auto" }}>
-          <Link href={node.frontmatter.github}>
+          <a href={node.frontmatter.github}>
             <IconButton>
               <FontAwesomeIcon icon={faGithub} size="sm" />
             </IconButton>
-          </Link>
-          <Link href={node.frontmatter.dockerHub}>
+          </a>
+          <a href={node.frontmatter.dockerHub}>
             <IconButton>
               <FontAwesomeIcon icon={faDocker} size="sm" />
             </IconButton>
-          </Link>
+          </a>
         </Box>
         <Box >
           <Link to={`/projects/${node.slug}`}>
@@ -112,7 +112,7 @@ export default function ProjectIndex({data}) {
   const learningProject = data.allMdx.nodes
     .filter((node => node.frontmatter.isOpenSource === "false"))
     .map((node) => (
-      <Slide in={tabValue === 1} container={containerRef.current} direction="right">
+      <Slide in={tabValue === 1} container={containerRef.current} direction="right" timeout={{enter: 450}}>
         <Grid item xs={12} sm={6} md={4} key={node.id}>
           <RenderProjectCard node={node} />
         </Grid>
@@ -122,7 +122,7 @@ export default function ProjectIndex({data}) {
   const isOpenSource = data.allMdx.nodes
     .filter((node => node.frontmatter.isOpenSource === "true"))
     .map((node) => (
-      <Slide in={tabValue === 2} container={containerRef.current} direction="right">
+      <Slide in={tabValue === 2} container={containerRef.current} direction="right" timeout={{enter: 400}}>
         <Grid item xs={12} sm={6} md={4} key={node.id}>
           <RenderProjectCard node={node} />
         </Grid>

@@ -16,7 +16,7 @@ import ArchitectureIcon from '@mui/icons-material/Architecture';
 
 // use gatsby for internal linking
 const navigationLinks = [
-  {id: 0, name: "about", href: "/"},
+  {id: 0, name: "about", href: "/about"},
   {id: 1, name: "projects", href: "/projects"},
   {id: 2, name: "contact", href: "/"},
 ];
@@ -79,7 +79,7 @@ export default function NavBarModal() {
                   className={styles.link}
                   variant="button"
                   underline="none"
-                  href={item.href}
+                  to={item.href}
                   key={item.id}
                 >
                   <Slide
