@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/LayoutComponent";
-import SEO from "../components/SeoComponent";
+import Seo from "../components/SeoComponent";
 import Skills from "../components/SkillsComponent";
 
 import Box from "@mui/material/Box";
@@ -19,15 +19,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-
 export default function AboutPage() {
   const styles = useStyles();
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title="About"
-        keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `About`]}
+        keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `about`]}
       />
       <Box>
         <Container maxWidth="md">
@@ -46,18 +45,19 @@ export default function AboutPage() {
             <Typography variant="button">
               full-stack software engineer based out of the greater Seattle area.
             </Typography>
-            <Typography variant="p">
-              <p>
-                I have a lot of fun working on web, mobile, and cloud apps and contributing to Open Source projects.
-                I seek knowledge and understanding so I build projects, read articles, listen to podcasts, and contribute code in my spare time.
-              </p>
-              <p>
-                When I'm not pushing code, you can find me in the outdoors on an adventure, working the bbq-smoker, or dunking oreo's.
-              </p>
-              <p>
-                Lately I've been into Jamstack and cloud infrastructure technologies like AWS, Docker, and Kubernetes.
+            <br />
+            <br />
+            <Typography component={"p"} variant="p">
+              I have a lot of fun working on web, mobile, and cloud apps and contributing to Open Source projects.
+              I seek knowledge and understanding so I build projects, read articles, listen to podcasts, and contribute code in my spare time.
+            <br />
+            <br />
+              When I'm not pushing code, you can find me in the outdoors on an adventure, working the bbq-smoker, or dunking oreo's.
+            <br />
+            <br />
+              Lately I've been into Jamstack and cloud infrastructure technologies like AWS, Docker, and Kubernetes.
+            <br />
                 You can check out some of my <Link to="/projects" className={styles.link}><em>projects here</em></Link>, or at one of my repo links.
-              </p>
             </Typography>
           </Box>
           <Box align="right">

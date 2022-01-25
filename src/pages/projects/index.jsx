@@ -9,7 +9,6 @@ import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider"
 import Grid from "@mui/material/Grid";
 import Grow from "@mui/material/Grow"
 import IconButton from "@mui/material/IconButton";
@@ -25,7 +24,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../../components/LayoutComponent";
-import SEO from "../../components/SeoComponent";
+import Seo from "../../components/SeoComponent";
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -91,11 +90,8 @@ function RenderProjectCard({ data, node }) {
 }
 
 export default function ProjectIndex({data}) {
-
   const [tabValue, setTabValue] = React.useState(0);
-
   const containerRef = React.useRef(null);
-
   const handleChange = (event, newTabValue) => {
     setTabValue(newTabValue);
   };
@@ -130,19 +126,17 @@ export default function ProjectIndex({data}) {
 
   return (
     <Layout>
-      <SEO
-        title="projects"
+      <Seo
+        title="Projects"
         keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `projects`]}
       />
       <Container maxWidth="lg">
           <Box mt={4}>
             <Typography
-              component={"h1"}
-            variant="h1"
-            align="center"
+              component={"h2"}
+              variant="h2"
               style={{color: "#f44336"}}
-              mt={8}
-              mb={8}
+              mt={8} mb={8}
             >
             <strong> projects.map(feat)</strong>
           </Typography>

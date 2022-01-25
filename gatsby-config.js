@@ -6,6 +6,12 @@ module.exports = {
     author: "Rodney Coyer"
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -19,18 +25,12 @@ module.exports = {
         path: `${__dirname}/projects`,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-material-ui`,
-    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Rodney Coyer | Portfolio`,
         short_name: `rodneycoyer-portfolio`,
-        start_url: `/`,
+        start_url: `/home`,
         background_color: `#20232a`,
         theme_color: `#20232a`,
         display: `minimal-ui`,

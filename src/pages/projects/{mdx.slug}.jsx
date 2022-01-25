@@ -1,12 +1,15 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import Hidden from "@mui/material/Hidden"
 import { makeStyles } from "@mui/styles";
 import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography"
 
 import Layout from "../../components/LayoutComponent";
 
@@ -33,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
         zIndex: 100,
         position: "relative",
         justifyContent: "center",
-        alignItems: "center"
     },
     hero_footer: {
         height: "10vh",
@@ -45,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const FeaturedProject = ({ data }) => {
-
     const styles = useStyles();
 
     return (
@@ -58,46 +59,40 @@ const FeaturedProject = ({ data }) => {
                     backgroundColor="lightgray"
                 />
             <div className={styles.hero_overlay}></div>
-                <Container maxWidth="lg" >
+                <Container maxWidth="xl" >
                     <Grid container className={styles.hero_heading} align="center" >
-                        <Grid item>
-                            <h1> {data.mdx.frontmatter.title} </h1>
-                            <h2> {data.mdx.frontmatter.short_description} </h2>
+                        <Grid item mt={6}>
+                            <Typography component="h1" variant="h2">
+                                <strong> {data.mdx.frontmatter.title} </strong>
+                            </Typography>
+                            <Typography component="h2" variant="h5" color="secondary">
+                                {data.mdx.frontmatter.short_description}
+                            </Typography>
                         </Grid>
                     </Grid>
-                    <Grid container className={styles.hero_footer}>
-                        <Grid item>
-                            <h3>context</h3>
+                    <Hidden smDown>
+                        <Grid container className={styles.hero_footer} align="center" justifyContent="space-between" spacing={1}>
+                            <Grid item xs={3}>
+                                <Typography variant="button" color="secondary"> type </Typography>
+                                <Typography variant="h6">{data.mdx.frontmatter.type}</Typography>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Typography variant="button" color="secondary"> framework </Typography>
+                                <Typography variant="h6">{data.mdx.frontmatter.stack}</Typography>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Typography variant="button" color="secondary"> role </Typography>
+                                <Typography variant="h6">{data.mdx.frontmatter.role}</Typography>
+                            </Grid>
                         </Grid>
-                        <Grid item>
-                            <h3>tech stack</h3>
-                        </Grid>
-                        <Grid item>
-                            <h3>role</h3>
-                        </Grid>
-                    </Grid>
+                    </Hidden>
                 </Container>
             </Paper>
             <Box px={{ xs: 3, sm: 5 }} py={{ xs: 15, sm: 15 }} >
                 <Container maxWidth="lg">
-                    <Grid container justifyContent="center" align="center">
-                        <Grid item>
-                            <h1>Project Overview</h1>
-                            <p>{data.mdx.frontmatter.full_description}</p>
-                        </Grid>
-
-                    </Grid>
-                    <Grid container>
-                        <Grid item>
-                            <h1>Concepts, Tech & Design</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam asperiores et commodi itaque aut. Veniam quam inventore rem iusto. Id, officiis! Quos, iusto pariatur. Id aperiam ipsa eius optio tenetur, recusandae perspiciatis corporis illo dolorem officia voluptates modi corrupti debitis temporibus atque magnam harum, inventore maiores vitae excepturi ratione facilis, adipisci voluptatibus nesciunt? Quod itaque dolore porro unde nihil vel soluta illo, deleniti possimus vitae ratione ut id distinctio laboriosam error ullam ad aliquam temporibus blanditiis sed ipsam minus modi? Vitae exercitationem repellat illum sint ab blanditiis recusandae molestiae, dolor excepturi sapiente ea pariatur maxime delectus impedit eos soluta nihil debitis libero voluptatibus. Consequuntur ex nesciunt placeat. Praesentium corporis ratione beatae, autem ea velit dignissimos voluptatibus temporibus nostrum nesciunt minima repudiandae reprehenderit voluptate?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur alias provident doloribus expedita voluptatibus quis accusantium earum perspiciatis autem vero assumenda ut, reiciendis quo dolor explicabo quae commodi quibusdam, iure labore. Inventore esse dolore doloremque suscipit laborum soluta quaerat laudantium, animi odio autem quo perferendis at consequuntur officia molestiae delectus, fugiat tempore natus impedit quibusdam? Necessitatibus enim reiciendis voluptatibus velit esse. Corporis id et, officiis impedit sunt esse illo, animi neque commodi, blanditiis modi porro quas aspernatur delectus cumque? Tenetur, fuga dolor quis rem consectetur voluptate inventore dolorem et, provident assumenda fugit. Autem provident voluptates aperiam illo totam tempora incidunt enim similique tempore laboriosam ratione illum quo, est neque nihil culpa ab minima perferendis dolorum. Excepturi id sed tempore aliquid nam fugiat qui distinctio incidunt, quidem non aut aliquam voluptatum atque repudiandae tenetur molestiae soluta harum cupiditate ex corporis similique. Tenetur placeat omnis sint nostrum minus iusto veritatis! Perspiciatis, id itaque assumenda voluptatum doloremque sapiente quis sunt laudantium eos facere quam quo porro recusandae mollitia vitae minus facilis soluta rem libero quidem sed commodi? Incidunt dolor magnam alias sequi ad debitis assumenda reprehenderit labore maxime soluta. Quos, sint dicta? Quae, atque vel saepe fuga earum in, ratione doloremque ex mollitia dicta praesentium illo pariatur! At impedit et maxime rerum voluptate nemo, molestias ipsum officiis perspiciatis voluptatem qui eligendi consequuntur non culpa explicabo praesentium, iste facere a? Voluptatibus similique porro distinctio vitae, illum quod accusamus.
-                            </p>
-                        </Grid>
-                    </Grid>
+                    <MDXRenderer>
+                        {data.mdx.body}
+                    </MDXRenderer>
                 </Container>
             </Box>
         </Layout>
@@ -114,6 +109,7 @@ export const FeaturedQuery = graphql`
             dockerHub
             role
             context
+            type
             year
             stack
             short_description
