@@ -4,12 +4,14 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Box from "@mui/material/Box";
+import Chip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Hidden from "@mui/material/Hidden"
 import { makeStyles } from "@mui/styles";
 import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography"
+import { styled } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
 
 import Layout from "../../components/LayoutComponent";
 
@@ -44,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         alignItems: "center"
     },
+}));
+
+const TagList = styled("li")(({ theme }) => ({
+    margin: theme.spacing(0.5)
 }));
 
 const FeaturedProject = ({ data }) => {
@@ -88,11 +94,33 @@ const FeaturedProject = ({ data }) => {
                     </Hidden>
                 </Container>
             </Paper>
-            <Box px={{ xs: 3, sm: 5 }} py={{ xs: 15, sm: 15 }} >
+            <Box px={{ xs: 3, sm: 5 }} py={{ xs: 10, sm: 10 }} >
                 <Container maxWidth="lg">
+                    <Typography variant="h4" mb={2}> Project Overview </Typography>
+                    <Typography variant="p">{data.mdx.frontmatter.full_description}</Typography>
                     <MDXRenderer>
                         {data.mdx.body}
                     </MDXRenderer>
+                    <Typography component={"h3"} variant="p" mt={30}>
+                        tags
+                    </Typography>
+                    <Box
+                        sx={{
+                        display: 'flex',
+                        justifyContent: 'left',
+                        flexDirection: 'row',
+                        flexWrap: 'wrap',
+                        listStyle: 'none',
+                    }}>
+                        {data.mdx.frontmatter.tags.map((tag, i) => [
+                            <TagList key={i}>
+                                <Chip label={tag} color="warning" clickable>
+                                    {tag}
+                                    {i < data.mdx.frontmatter.tags.length - 1 ? ' ' : ''}
+                                </Chip>
+                            </TagList>
+                        ])}
+                    </Box>
                 </Container>
             </Box>
         </Layout>
@@ -115,6 +143,16 @@ export const FeaturedQuery = graphql`
             short_description
             full_description
             lessons_learned
+            tags
+            thumbnail01 {
+                childImageSharp {
+                    gatsbyImageData(
+                    width: 25
+                    formats: [AUTO, WEBP, AVIF]
+                    )
+                }
+            }
+            thumbnail01_alt
             image01_alt
             image01 {
                 childImageSharp {
