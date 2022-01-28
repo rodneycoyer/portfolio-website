@@ -49,21 +49,23 @@ function RenderProjectCard({ data, node }) {
     <Card className={styles.card} type={node.frontmatter.isOpenSource}>
       <CardActionArea>
       <CardMedia component="div" >
-        <GatsbyImage
-          id="image"
-          image={getImage(node.frontmatter.image01)}
-          alt={node.frontmatter.image01_alt}
-        />
+        <Link to={`/projects/${node.slug}`}>
+          <GatsbyImage
+            id="image"
+            image={getImage(node.frontmatter.image01)}
+            alt={node.frontmatter.image01_alt}
+          />
+        </Link>
       </CardMedia>
         <CardContent>
           <Typography variant="h5">
             {node.frontmatter.title}
           </Typography>
-          <Typography variant="body" color="secondary">
+          <Typography variant="body" color="secondary" noWrap>
             {node.frontmatter.short_description}
           </Typography>
         </CardContent>
-      </CardActionArea>
+        </CardActionArea>
       <CardActions disableSpacing>
         <Box style={{ marginRight: "auto" }}>
           <a href={node.frontmatter.github}>

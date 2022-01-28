@@ -31,21 +31,30 @@ const Footer = () => {
                         justifyContent="center"
                     >
                         <Grid item>
-                            <Link href="https://www.linkedin.com/in/rodney-coyer-b2922b72/">
+                            <Link
+                                href="https://www.linkedin.com/in/rodney-coyer-b2922b72/"
+                                target="blank"
+                            >
                                 <IconButton>
                                     <LinkedInIcon />
                                 </IconButton>
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="https://github.com/roofwalker">
+                            <Link
+                                href="https://github.com/rodneycoyer"
+                                target="blank"
+                            >
                                 <IconButton>
                                     <GitHubIcon />
                                 </IconButton>
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="https://codepen.io/roofwalker">
+                            <Link
+                                href="https://codepen.io/roofwalker"
+                                target="blank"
+                            >
                                 <IconButton>
                                     <FontAwesomeIcon icon={faCodepen} />
                                 </IconButton>
@@ -59,14 +68,17 @@ const Footer = () => {
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="">
+                            <Link
+                                href="https://twitter.com/rodneycoyer"
+                                target="blank"
+                            >
                                 <IconButton>
                                     <TwitterIcon />
                                 </IconButton>
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="">
+                            <Link href="mailto:rodney.coyer@gmail.com">
                                 <IconButton>
                                     <MailOutlineIcon />
                                 </IconButton>

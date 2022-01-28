@@ -27,35 +27,50 @@ const Social = ({ direction }) => {
     return (
         <Grid container direction={direction || "row"} spacing={1}>
             <Grid item>
-                <Link href="https://www.linkedin.com/in/rodney-coyer-b2922b72/">
+                <Link
+                    href="https://www.linkedin.com/in/rodney-coyer-b2922b72/"
+                    target="blank"
+                >
                     <IconButton>
                         <LinkedInIcon className={styles.icon} />
                     </IconButton>
                 </Link>
             </Grid>
             <Grid item>
-                <Link href="https://github.com/roofwalker">
+                <Link
+                    href="https://github.com/rodneycoyer"
+                    target="blank"
+                >
                     <IconButton>
                         <GitHubIcon className={styles.icon}/>
                     </IconButton>
                 </Link>
             </Grid>
             <Grid item>
-                <Link href="">
+                <Link
+                    href="https://twitter.com/rodneycoyer"
+                    target="blank"
+                >
                     <IconButton>
                         <TwitterIcon className={styles.icon} />
                     </IconButton>
                 </Link>
             </Grid>
             <Grid item>
-                <Link href="https://codepen.io/roofwalker">
+                <Link
+                    href="https://codepen.io/roofwalker"
+                    target="blank"
+                >
                     <IconButton>
                         <FontAwesomeIcon icon={faCodepen} className={styles.icon} />
                     </IconButton>
                 </Link>
             </Grid>
             <Grid item>
-                <Link href="">
+                <Link
+                    href=""
+                    target="blank"
+                >
                     <IconButton>
                         <FontAwesomeIcon icon={faDocker} className={styles.icon} />
                     </IconButton>

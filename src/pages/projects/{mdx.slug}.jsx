@@ -95,26 +95,26 @@ const FeaturedProject = ({ data }) => {
                 </Container>
             </Paper>
             <Box px={{ xs: 3, sm: 5 }} py={{ xs: 10, sm: 10 }} >
-                <Container maxWidth="lg">
+                <Container maxWidth="md">
                     <Typography variant="h4" mb={2}> Project Overview </Typography>
                     <Typography variant="p">{data.mdx.frontmatter.full_description}</Typography>
                     <MDXRenderer>
                         {data.mdx.body}
                     </MDXRenderer>
-                    <Typography component={"h3"} variant="p" mt={30}>
-                        tags
+                    <Typography component={"h3"} variant="p" mt={25}>
+                        tags 🏷️
                     </Typography>
                     <Box
                         sx={{
                         display: 'flex',
-                        justifyContent: 'left',
+                        justifyContent: 'center',
                         flexDirection: 'row',
                         flexWrap: 'wrap',
                         listStyle: 'none',
                     }}>
                         {data.mdx.frontmatter.tags.map((tag, i) => [
                             <TagList key={i}>
-                                <Chip label={tag} color="warning" clickable>
+                                <Chip label={tag} color="secondary" clickable>
                                     {tag}
                                     {i < data.mdx.frontmatter.tags.length - 1 ? ' ' : ''}
                                 </Chip>

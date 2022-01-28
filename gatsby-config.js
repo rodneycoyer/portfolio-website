@@ -6,8 +6,8 @@ module.exports = {
     author: "Rodney Coyer"
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

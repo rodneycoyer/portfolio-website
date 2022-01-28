@@ -57,7 +57,7 @@ export default function AboutPage() {
             <br />
               Lately I've been into Jamstack and cloud infrastructure technologies like AWS, Docker, and Kubernetes.
             <br />
-                You can check out some of my <Link to="/projects" className={styles.link}><em>projects here</em></Link>, or at one of my repo links.
+              You can check out some of my <Link to="/projects" className={styles.link}> <strong><em> projects here </em></strong> </Link>, or at one my <a className={styles.link} href="https://github.com/rodneycoyer" target="blank" aria-label="github link"><strong><em> gitHub repo </em></strong></a>.
             </Typography>
           </Box>
           <Box align="right">
