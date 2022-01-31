@@ -33,7 +33,7 @@ export default function AboutPage() {
           <Box mt={4}>
             <Typography
               component={"h1"}
-              variant="h1"
+              variant="h2"
               style={{color: "#f44336"}}
               mt={8}
               mb={2}

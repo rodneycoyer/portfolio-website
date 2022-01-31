@@ -140,7 +140,7 @@ export default function ProjectIndex({data}) {
               style={{color: "#f44336"}}
               mt={8} mb={8}
             >
-            <strong> projects.map(feat)</strong>
+            <strong> projects.map</strong>
           </Typography>
           </Box>
       </Container>

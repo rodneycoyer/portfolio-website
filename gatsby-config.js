@@ -1,10 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: "Rodney Coyer | Portfolio",
-    description: "Portfolio Website",
-    siteUrl: "https://www.rodneycoyer.com",
-    author: "Rodney Coyer"
-  },
   plugins: [
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
@@ -38,4 +32,10 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    title: "Rodney Coyer | Portfolio",
+    description: "Portfolio Website",
+    siteUrl: "https://www.rodneycoyer.com",
+    author: "Rodney Coyer"
+  },
 };
