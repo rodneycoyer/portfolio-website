@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link } from "gatsby-theme-material-ui";
 
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import Fade from "@mui/material/Fade";
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
-import { makeStyles } from "@mui/styles";
 import Modal from "@mui/material/Modal";
 import Slide from "@mui/material/Slide";
 import Typography from "@mui/material/Typography";
@@ -33,22 +32,12 @@ const styleModal = {
   boxShadow: 24,
   p: 2,
 };
-// nav link containers
-const useStyles = makeStyles((theme) => ({
-  link: {
-    marginLeft: 20,
-    marginTop: 25,
-    marginRight: 20,
-    marginBottom: 25,
-  },
-}));
 
 export default function NavBarModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const containerRef = React.useRef(null);
-  const styles = useStyles();
 
   return (
     <div style={{marginLeft: "auto"}}>
@@ -76,7 +65,6 @@ export default function NavBarModal() {
             >
               {navigationLinks.map((item) => (
                 <Link
-                  className={styles.link}
                   variant="button"
                   underline="none"
                   to={item.href}
@@ -88,7 +76,7 @@ export default function NavBarModal() {
                     direction="up"
                     timeout={{enter: 350}}
                   >
-                    <Grid item>
+                    <Grid item p={2} mt={1} mb={1}>
                       <Button
                         fullWidth
                         size="large"

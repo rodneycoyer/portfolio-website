@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
-import Link from "@mui/material/Link";
+import { Link } from "gatsby-theme-material-ui";
 import { makeStyles } from "@mui/styles";
 
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -28,7 +28,7 @@ const Social = ({ direction }) => {
         <Grid container direction={direction || "row"} spacing={1}>
             <Grid item>
                 <Link
-                    href="https://www.linkedin.com/in/rodney-coyer-b2922b72/"
+                    to="https://www.linkedin.com/in/rodney-coyer-b2922b72/"
                     target="blank"
                 >
                     <IconButton>
@@ -38,7 +38,7 @@ const Social = ({ direction }) => {
             </Grid>
             <Grid item>
                 <Link
-                    href="https://github.com/rodneycoyer"
+                    to="https://github.com/rodneycoyer"
                     target="blank"
                 >
                     <IconButton>
@@ -48,7 +48,7 @@ const Social = ({ direction }) => {
             </Grid>
             <Grid item>
                 <Link
-                    href="https://twitter.com/rodneycoyer"
+                    to="https://twitter.com/rodneycoyer"
                     target="blank"
                 >
                     <IconButton>
@@ -58,7 +58,7 @@ const Social = ({ direction }) => {
             </Grid>
             <Grid item>
                 <Link
-                    href="https://codepen.io/roofwalker"
+                    to="https://codepen.io/roofwalker"
                     target="blank"
                 >
                     <IconButton>
@@ -68,7 +68,7 @@ const Social = ({ direction }) => {
             </Grid>
             <Grid item>
                 <Link
-                    href=""
+                    to=""
                     target="blank"
                 >
                     <IconButton>

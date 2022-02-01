@@ -6,13 +6,13 @@ import CssBaseline from "@mui/material/CssBaseline"
 import NavBar from "./NavBarComponent";
 import Footer from "./FooterComponent";
 
-const darkTheme = createTheme({
+const theme = createTheme({
   palette: {
         mode: 'dark',
   },
 });
 
-const Layout = ({children}) => (
+const Layout = ({ children }) => (
     <StaticQuery
         query={graphql`
         query SiteTitleQuery {
@@ -26,10 +26,10 @@ const Layout = ({children}) => (
         `}
         render={data => (
             <React.Fragment>
-                <ThemeProvider theme={darkTheme}>
+                <ThemeProvider theme={theme}>
                 <CssBaseline />
                     <NavBar />
-                    <main>{children}</main>
+                    {children}
                     <Footer />
                 </ThemeProvider>
             </React.Fragment>

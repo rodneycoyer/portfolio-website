@@ -1,6 +1,7 @@
 import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+import { Link } from "gatsby-theme-material-ui";
 
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";

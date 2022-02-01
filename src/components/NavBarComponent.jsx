@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, IconButton } from "gatsby-theme-material-ui";
 import FilterHdrOutlinedIcon from "@mui/icons-material/FilterHdrOutlined";
-import IconButton from "@mui/material/IconButton";
 
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";

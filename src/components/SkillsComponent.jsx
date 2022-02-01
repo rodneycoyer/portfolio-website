@@ -27,7 +27,7 @@ import { faPassport } from "@fortawesome/free-solid-svg-icons/faPassport";
 const useStyles = makeStyles((theme) => ({
     icon: {
         margin: 5,
-        paddingBottom: 40,
+        paddingBottom: 50,
         color: "#42a5f5",
         "&:hover": {
         color: "#9fa8da"
