@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "gatsby-theme-material-ui";
-import Layout from "../components/LayoutComponent";
 import Seo from "../components/SeoComponent";
 import Skills from "../components/SkillsComponent";
 
@@ -8,6 +7,8 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { makeStyles } from "@mui/styles";
+
+import TopLayout from "../gastby-theme-material-ui-top-layout/components/top-layout";
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -23,7 +24,7 @@ export default function AboutPage() {
   const styles = useStyles();
 
   return (
-    <Layout>
+    <TopLayout>
       <Seo
         title="About"
         keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `about`]}
@@ -75,6 +76,6 @@ export default function AboutPage() {
         </Container>
       </Box>
       <Skills />
-    </Layout>
+    </TopLayout>
   );
 }

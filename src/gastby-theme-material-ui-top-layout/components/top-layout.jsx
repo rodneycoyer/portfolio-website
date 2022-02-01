@@ -1,18 +1,19 @@
 import * as React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from "@mui/material/CssBaseline"
 
-import NavBar from "./NavBarComponent";
-import Footer from "./FooterComponent";
+import ThemeTopLayout from "gatsby-theme-material-ui-top-layout/src/components/top-layout";
+import NavBar from "../../components/NavBarComponent";
+import Footer from "../../components/FooterComponent";
+
+import { createTheme } from "@mui/material";
 
 const theme = createTheme({
   palette: {
-        mode: 'dark',
-  },
+    mode: "dark",
+  }
 });
 
-const Layout = ({ children }) => (
+const TopLayout = ({ children }) => (
     <StaticQuery
         query={graphql`
         query SiteTitleQuery {
@@ -26,15 +27,14 @@ const Layout = ({ children }) => (
         `}
         render={data => (
             <React.Fragment>
-                <ThemeProvider theme={theme}>
-                <CssBaseline />
+                <ThemeTopLayout theme={theme}>
                     <NavBar />
-                    {children}
+                    <main>{children}</main>
                     <Footer />
-                </ThemeProvider>
+                </ThemeTopLayout>
             </React.Fragment>
         )}
     />
 )
 
-export default Layout;
+export default TopLayout;

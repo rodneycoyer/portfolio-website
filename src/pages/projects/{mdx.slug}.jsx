@@ -13,7 +13,7 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
-import Layout from "../../components/LayoutComponent";
+import TopLayout from "../../gastby-theme-material-ui-top-layout/components/top-layout";
 
 const useStyles = makeStyles((theme) => ({
     section: {
@@ -56,7 +56,7 @@ const FeaturedProject = ({ data }) => {
     const styles = useStyles();
 
     return (
-        <Layout>
+        <TopLayout>
             <Paper className={styles.section}>
                 <GatsbyImage
                     className={styles.hero_img}
@@ -123,7 +123,7 @@ const FeaturedProject = ({ data }) => {
                     </Box>
                 </Container>
             </Box>
-        </Layout>
+        </TopLayout>
     );
 }
 

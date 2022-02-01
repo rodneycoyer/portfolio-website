@@ -21,7 +21,8 @@ const Footer = () => {
         <footer>
             <Box
                 sx={{ display: "flex" }}
-                p={{ xs: 3 }}
+                mt={15}
+                mb={3}
                 textAlign="center"
             >
                 <Container >
@@ -78,7 +79,10 @@ const Footer = () => {
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="mailto:rodney.coyer@gmail.com">
+                            <Link
+                                href="mailto:rodney.coyer@gmail.com"
+                                target="blank"
+                            >
                                 <IconButton>
                                     <MailOutlineIcon />
                                 </IconButton>

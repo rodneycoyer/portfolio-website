@@ -1,6 +1,12 @@
 module.exports = {
+  siteMetadata: {
+    title: "Rodney Coyer | Portfolio",
+    description: "Portfolio Website",
+    siteUrl: "https://www.rodneycoyer.com",
+    author: "Rodney Coyer"
+  },
   plugins: [
-    `gatsby-theme-material-ui`,
+    `gatsby-theme-material-ui-top-layout`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -31,11 +37,20 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`
       },
     },
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Montserrat`,
+                variants: [`300`, `400`, `500`],
+              },
+            ],
+          },
+        },
+      },
+    },
   ],
-  siteMetadata: {
-    title: "Rodney Coyer | Portfolio",
-    description: "Portfolio Website",
-    siteUrl: "https://www.rodneycoyer.com",
-    author: "Rodney Coyer"
-  },
 };

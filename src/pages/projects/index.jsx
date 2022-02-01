@@ -24,8 +24,8 @@ import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
 
-import Layout from "../../components/LayoutComponent";
 import Seo from "../../components/SeoComponent";
+import TopLayout from "../../gastby-theme-material-ui-top-layout/components/top-layout";
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -47,7 +47,7 @@ function RenderProjectCard({ data, node }) {
   const styles = useStyles();
 
   return (
-    <Card className={styles.card} type={node.frontmatter.isOpenSource}>
+    <Card className={styles.card} type={node.frontmatter.isOpenSource} key={node.id}>
       <CardActionArea>
       <CardMedia component="div" >
         <Link to={`/projects/${node.slug}`}>
@@ -128,7 +128,7 @@ export default function ProjectIndex({data}) {
     ));
 
   return (
-    <Layout>
+    <TopLayout>
       <Seo
         title="Projects"
         keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `projects`]}
@@ -161,7 +161,7 @@ export default function ProjectIndex({data}) {
           </Grid>
         </Container>
       </Box>
-    </Layout>
+    </TopLayout>
   );
 }
 

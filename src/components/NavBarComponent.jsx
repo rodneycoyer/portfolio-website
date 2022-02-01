@@ -19,13 +19,13 @@ const NavBar = () => {
                 <Container maxWidth="md">
                     <Toolbar disableGutters>
                         <Link
-              to="/"
-              variant="button"
-          >
-              <IconButton color="primary">
-                <FilterHdrOutlinedIcon fontSize="large"/>
-              </IconButton>
-          </Link>
+                            to="/"
+                            variant="button"
+                        >
+                            <IconButton color="primary">
+                                <FilterHdrOutlinedIcon fontSize="large"/>
+                            </IconButton>
+                        </Link>
                         <NavBarModal />
                     </Toolbar>
                 </Container>
