@@ -6,7 +6,7 @@ module.exports = {
     author: "Rodney Coyer"
   },
   plugins: [
-    `gatsby-theme-material-ui-top-layout`,
+    `gatsby-theme-material-ui`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -44,7 +44,7 @@ module.exports = {
           fonts: {
             google: [
               {
-                family: `Montserrat`,
+                family: `Roboto`,
                 variants: [`300`, `400`, `500`],
               },
             ],
