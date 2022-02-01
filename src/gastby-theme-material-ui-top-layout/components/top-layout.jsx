@@ -1,17 +1,12 @@
 import * as React from "react";
 import { StaticQuery, graphql } from "gatsby";
+import { Provider } from "react-redux";
+import store from "../../createStore";
 
 import ThemeTopLayout from "gatsby-theme-material-ui-top-layout/src/components/top-layout";
+import theme from "../theme";
 import NavBar from "../../components/NavBarComponent";
 import Footer from "../../components/FooterComponent";
-
-import { createTheme } from "@mui/material";
-
-const theme = createTheme({
-  palette: {
-    mode: "dark",
-  }
-});
 
 const TopLayout = ({ children }) => (
     <StaticQuery
@@ -26,13 +21,13 @@ const TopLayout = ({ children }) => (
         }
         `}
         render={data => (
-            <React.Fragment>
+            <Provider store={store}>
                 <ThemeTopLayout theme={theme}>
                     <NavBar />
-                    <main>{children}</main>
+                        {children}
                     <Footer />
                 </ThemeTopLayout>
-            </React.Fragment>
+            </Provider>
         )}
     />
 )
