@@ -5,6 +5,9 @@ module.exports = {
     siteUrl: "https://www.rodneycoyer.com",
     author: "Rodney Coyer"
   },
+  flags: {
+    FAST_DEV: true,
+  },
   plugins: [
     `gatsby-theme-material-ui`,
     `gatsby-plugin-react-helmet`,

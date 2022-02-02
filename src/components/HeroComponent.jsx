@@ -52,7 +52,6 @@ export default function HeroSection() {
         className={styles.hero_image}
         src="../images/header-background.jpg"
         alt="silhouette of a person walking on beach, during sunset, at Ruby Beach, Wa"
-        placeholder="blurred"
         layout="fullWidth"
         as="image"
         loading="eager"
@@ -64,11 +63,12 @@ export default function HeroSection() {
           container
           justifyContent="space-between"
           alignItems="center"
+          component="div"
         >
-          <Grow in={shouldShow} timeout={{enter: 1500}}>
+          <Grow in={shouldShow} timeout={{enter: 1500}} component="div">
             <Grid item md={12} lg={9} >
 
-              <Typography component="h1" variant="h2" color="text.primary">
+              <Typography component="div" variant="h2" color="text.primary">
                <em>Hi There and Welcome!</em>
               </Typography>
 

@@ -13,6 +13,7 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
+import Seo from "../../components/SeoComponent";
 import TopLayout from "../../gastby-theme-material-ui-top-layout/components/top-layout";
 
 const useStyles = makeStyles((theme) => ({
@@ -57,6 +58,10 @@ const FeaturedProject = ({ data }) => {
 
     return (
         <TopLayout>
+            <Seo
+                title={data.mdx.frontmatter.title}
+                keywords={data.mdx.frontmatter.tags}
+            />
             <Paper className={styles.section}>
                 <GatsbyImage
                     className={styles.hero_img}
