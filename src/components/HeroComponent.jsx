@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       height: "90vh",
   },
   overlay: {
-      background: "linear-gradient(100deg, black, transparent, black)",
+      background: "linear-gradient(100deg, rgba(0, 0, 0, 0.87) 5%, transparent, rgba(0, 0, 0, 0.87))",
       height: "90vh",
       width: "100%",
       position: "absolute",
@@ -52,6 +52,10 @@ export default function HeroSection() {
         className={styles.hero_image}
         src="../images/header-background.jpg"
         alt="silhouette of a person walking on beach, during sunset, at Ruby Beach, Wa"
+        placeholder="blurred"
+        layout="fullWidth"
+        as="image"
+        loading="eager"
       />
       <div className={styles.overlay}></div>
       <Container className={styles.container} maxWidth="md">

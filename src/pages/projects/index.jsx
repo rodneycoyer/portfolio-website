@@ -101,8 +101,8 @@ export default function ProjectIndex({data}) {
 
   const directory = data.allMdx.nodes.map((node) => (
     <Grow in={tabValue === 0} timeout={{enter: 450}}>
-      <Grid item xs={12} sm={6} md={4} key={node.id}>
-        <RenderProjectCard node={node} />
+      <Grid item xs={12} sm={6} md={4} >
+        <RenderProjectCard node={node} key={node.id}/>
       </Grid>
     </Grow>
   ));
@@ -111,8 +111,8 @@ export default function ProjectIndex({data}) {
     .filter((node => node.frontmatter.isOpenSource === "false"))
     .map((node) => (
       <Slide in={tabValue === 1} container={containerRef.current} direction="right" timeout={{enter: 450}}>
-        <Grid item xs={12} sm={6} md={4} key={node.id}>
-          <RenderProjectCard node={node} />
+        <Grid item xs={12} sm={6} md={4} >
+          <RenderProjectCard node={node} key={node.id}/>
         </Grid>
       </Slide>
     ));
@@ -121,8 +121,8 @@ export default function ProjectIndex({data}) {
     .filter((node => node.frontmatter.isOpenSource === "true"))
     .map((node) => (
       <Slide in={tabValue === 2} container={containerRef.current} direction="right" timeout={{enter: 400}}>
-        <Grid item xs={12} sm={6} md={4} key={node.id}>
-          <RenderProjectCard node={node} />
+        <Grid item xs={12} sm={6} md={4} >
+          <RenderProjectCard node={node} key={node.id}/>
         </Grid>
       </Slide>
     ));
