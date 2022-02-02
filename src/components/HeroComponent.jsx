@@ -56,7 +56,7 @@ export default function HeroSection() {
         as="image"
         loading="eager"
       />
-      <div className={styles.overlay}></div>
+      <div className={styles.overlay} component="div" ></div>
       <Container className={styles.container} maxWidth="md">
         <Grid
           className={styles.content}
@@ -88,7 +88,7 @@ export default function HeroSection() {
           </Grow>
           <Hidden lgDown>
             <Grow in={shouldShow} timeout={{enter: 6000}}>
-              <Grid item>
+              <Grid item component="div">
                 <Social direction="column" />
               </Grid>
             </Grow>
