@@ -26,17 +26,11 @@ const useStyles = makeStyles((theme) => ({
   container: {
       height: "90vh",
   },
-  overlay: {
-      height: "90vh",
-      width: "100%",
-      position: "absolute",
-      zIndex: 2,
-  },
   hero_image: {
       height: "90vh",
       width: "100%",
       zIndex: 1,
-    position: "absolute",
+      position: "absolute"
   },
 }));
 
@@ -52,10 +46,9 @@ export default function HeroSection() {
         src="../images/header-background.jpg"
         alt="silhouette of a person walking on beach, during sunset, at Ruby Beach, Wa"
         layout="fullWidth"
-        as="div"
+        as="image"
         loading="eager"
       />
-      <div className={styles.overlay} component="div" ></div>
       <Container className={styles.container} maxWidth="md">
         <Grid
           className={styles.content}
@@ -67,7 +60,7 @@ export default function HeroSection() {
           <Grow in={shouldShow} timeout={{enter: 1500}} component="div">
             <Grid item md={12} lg={9} >
 
-              <Typography alignJustify component="div" variant="h1" color="#37474f">
+              <Typography component="div" variant="h1" color="#1a237e">
                <strong>Hello World_</strong>
               </Typography>
 
@@ -87,7 +80,7 @@ export default function HeroSection() {
           </Grow>
           <Hidden lgDown>
             <Grow in={shouldShow} timeout={{enter: 6000}}>
-              <Grid item>
+              <Grid item component="div">
                 <Social direction="column" />
               </Grid>
             </Grow>
