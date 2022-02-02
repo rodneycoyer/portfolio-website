@@ -40,6 +40,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: metaDescription,
         },
         {
+          name: `viewport`,
+          content: "initial-scale=1, width=device-width"
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -83,9 +87,9 @@ function SEO({ description, lang, meta, keywords, title }) {
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
-  keywords: [],
-  description: ``,
+  meta: [{ name:"viewport", content:"initial-scale=1, width=device-width"}],
+  keywords: ["rodney", "coyer", "portfolio", "software", "engineer", "javascript", "full-stack"],
+  description: `portfolio website`,
 }
 
 SEO.propTypes = {

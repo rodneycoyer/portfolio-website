@@ -1,4 +1,5 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import { Provider } from "react-redux";
 import createStore from "../../state/createStore";
@@ -34,5 +35,9 @@ const TopLayout = ({ children }) => (
         )}
     />
 )
+
+TopLayout.propTypes = {
+    children: PropTypes.node,
+};
 
 export default TopLayout;

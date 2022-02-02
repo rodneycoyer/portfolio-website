@@ -11,6 +11,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Typewriter from "typewriter-effect";
 
+
 import Social from "./SocialComponent";
 
 const useStyles = makeStyles((theme) => ({
@@ -46,7 +47,7 @@ export default function HeroSection() {
   useEffect(() => setShouldShow(true), []);
 
   return (
-    <Paper className={styles.section}>
+    <Paper>
       <StaticImage
         className={styles.hero_image}
         src="../images/header-background.jpg"
