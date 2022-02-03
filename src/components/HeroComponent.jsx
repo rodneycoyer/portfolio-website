@@ -15,21 +15,19 @@ import Typewriter from "typewriter-effect";
 import Social from "./SocialComponent";
 
 const useStyles = makeStyles((theme) => ({
-  section: {
-      height: "90vh",
-  },
   content: {
       height: "100%",
-      zIndex: 100,
-      position: "relative",
+      zIndex: 1,
+      position: "absolute",
   },
   container: {
-      height: "90vh",
+    height: "90vh",
+    position: "relative",
   },
   hero_image: {
       height: "90vh",
       width: "100%",
-      zIndex: 1,
+      zIndex: 0,
       position: "absolute"
   },
 }));
@@ -41,26 +39,26 @@ export default function HeroSection() {
 
   return (
     <Paper>
-      <StaticImage
-        className={styles.hero_image}
-        src="../images/header-background.jpg"
-        alt="silhouette of a person walking on beach, during sunset, at Ruby Beach, Wa"
-        layout="fullWidth"
-        as="image"
-        loading="eager"
-      />
-      <Container className={styles.container} maxWidth="md">
+      <Container className={styles.container} maxWidth="false" disableGutters>
+        <StaticImage
+          className={styles.hero_image}
+          src="../images/header-background.jpg"
+          alt="silhouette of a person walking on beach, during sunset, at Ruby Beach, Wa"
+          layout="fullWidth"
+          as="div"
+          loading="eager"
+        />
         <Grid
           className={styles.content}
           container
-          justifyContent="space-between"
-          alignItems="center"
+          direction="row"
+          alignContent="center"
+          justifyContent="center"
           component="div"
         >
           <Grow in={shouldShow} timeout={{enter: 1500}} component="div">
-            <Grid item md={12} lg={9} >
-
-              <Typography component="div" variant="h1" color="#1a237e">
+            <Grid item mr={12}>
+              <Typography component="div" variant="h1" color="#2196f3">
                <strong>Hello World_</strong>
               </Typography>
 
@@ -78,9 +76,9 @@ export default function HeroSection() {
               </Typography>
             </Grid>
           </Grow>
-          <Hidden lgDown>
+          <Hidden mdDown>
             <Grow in={shouldShow} timeout={{enter: 6000}}>
-              <Grid item component="div">
+              <Grid item component="div" ml={12}>
                 <Social direction="column" />
               </Grid>
             </Grow>
