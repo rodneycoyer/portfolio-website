@@ -1,14 +1,11 @@
 import * as React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { Provider } from "react-redux";
-import createStore from "../../state/createStore";
 
 import ThemeTopLayout from "gatsby-theme-material-ui-top-layout/src/components/top-layout";
 import theme from "../theme";
 import NavBar from "../../components/NavBarComponent";
 import Footer from "../../components/FooterComponent";
 
-const store = createStore();
 
 const TopLayout = ({ children }) => (
 
@@ -24,13 +21,11 @@ const TopLayout = ({ children }) => (
         }
         `}
         render={data => (
-            <Provider store={store}>
-                <ThemeTopLayout theme={theme}>
-                    <NavBar />
-                        {children}
-                    <Footer />
-                </ThemeTopLayout>
-            </Provider>
+            <ThemeTopLayout theme={theme}>
+                <NavBar />
+                    {children}
+                <Footer />
+            </ThemeTopLayout>
         )}
     />
 )
