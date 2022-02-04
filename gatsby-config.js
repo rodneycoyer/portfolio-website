@@ -5,11 +5,6 @@ module.exports = {
     siteUrl: "https://www.rodneycoyer.com",
     author: "Rodney Coyer"
   },
-  flags: {
-    FAST_DEV: true,
-    DEV_SSR: true,
-    PARALLEL_SOURCING: true,
-  },
   plugins: [
     `gatsby-plugin-top-layout`,
     `gatsby-plugin-react-helmet`,
