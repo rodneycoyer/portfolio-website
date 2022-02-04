@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby-theme-material-ui";
+import Link from '@mui/material/Link';
 
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
@@ -66,7 +66,7 @@ export default function NavBarModal() {
                 <Link
                   variant="button"
                   underline="none"
-                  to={item.href}
+                  href={item.href}
                   key={item.id}
                 >
                   <Slide

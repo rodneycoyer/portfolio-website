@@ -1,9 +1,10 @@
 import * as React from "react";
-import { Link, IconButton } from "gatsby-theme-material-ui";
+import { Link } from "gatsby";
 import FilterHdrOutlinedIcon from "@mui/icons-material/FilterHdrOutlined";
 
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton"
 import Slide from "@mui/material/Slide";
 import Toolbar from "@mui/material/Toolbar";
 import useScrollTrigger from "@mui/material/useScrollTrigger";

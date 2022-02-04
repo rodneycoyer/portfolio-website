@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
-import { Link } from "gatsby-theme-material-ui";
+import Link from "@mui/material/Link"
 import { makeStyles } from "@mui/styles";
 
 import GitHubIcon from '@mui/icons-material/GitHub';

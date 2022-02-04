@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby-theme-material-ui";
+import { Link } from "gatsby";
 import Seo from "../components/SeoComponent";
 import Skills from "../components/SkillsComponent";
 
