@@ -11,7 +11,6 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Typewriter from "typewriter-effect";
 
-
 import Social from "./SocialComponent";
 
 const useStyles = makeStyles((theme) => ({
@@ -57,9 +56,9 @@ export default function HeroSection() {
           component="div"
         >
           <Grow in={shouldShow} timeout={{enter: 1500}} component="div">
-            <Grid item mr={12}>
+            <Grid item mr={14} ml={2}>
               <Typography component="div" variant="h1" color="#2196f3">
-               <strong>Hello World_</strong>
+              <strong>Hello World_</strong>
               </Typography>
 
               <Typography component="div" variant="h3">
@@ -78,7 +77,7 @@ export default function HeroSection() {
           </Grow>
           <Hidden mdDown>
             <Grow in={shouldShow} timeout={{enter: 6000}}>
-              <Grid item component="div" ml={12}>
+              <Grid item component="div" ml={14}>
                 <Social direction="column" />
               </Grid>
             </Grow>

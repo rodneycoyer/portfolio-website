@@ -11,9 +11,8 @@ module.exports = {
     PARALLEL_SOURCING: true,
   },
   plugins: [
-    `gatsby-theme-material-ui`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-top-layout`,
+    'gatsby-plugin-mui-emotion',
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

@@ -13,8 +13,8 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
+import TopLayout from "../../../plugins/gatsby-plugin-top-layout/TopLayoutComponent";
 import Seo from "../../components/SeoComponent";
-import TopLayout from "../../gastby-theme-material-ui-top-layout/components/top-layout";
 
 const useStyles = makeStyles((theme) => ({
     section: {

@@ -8,7 +8,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { makeStyles } from "@mui/styles";
 
-import TopLayout from "../gastby-theme-material-ui-top-layout/components/top-layout";
+import TopLayout from "../../plugins/gatsby-plugin-top-layout/TopLayoutComponent";
 
 const useStyles = makeStyles((theme) => ({
   link: {

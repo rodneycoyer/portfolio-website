@@ -25,7 +25,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
 
 import Seo from "../../components/SeoComponent";
-import TopLayout from "../../gastby-theme-material-ui-top-layout/components/top-layout";
+import TopLayout from "../../../plugins/gatsby-plugin-top-layout/TopLayoutComponent";
 
 const useStyles = makeStyles((theme) => ({
   link: {
