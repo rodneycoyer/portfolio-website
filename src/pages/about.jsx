@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export default function AboutPage() {
+export default function AboutPage(props) {
   const styles = useStyles();
 
   return (
-    <TopLayout>
+    <TopLayout {...props}>
       <Seo
         title="About"
         keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `about`]}

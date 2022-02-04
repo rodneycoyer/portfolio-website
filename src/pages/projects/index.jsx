@@ -92,7 +92,7 @@ function RenderProjectCard({ data, node }) {
   );
 }
 
-export default function ProjectIndex({data}) {
+export default function ProjectIndex({ data, props}) {
   const [tabValue, setTabValue] = React.useState(0);
   const containerRef = React.useRef(null);
   const handleChange = (event, newTabValue) => {
@@ -128,7 +128,7 @@ export default function ProjectIndex({data}) {
     ));
 
   return (
-    <TopLayout>
+    <TopLayout {...props}>
       <Seo
         title="Projects"
         keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `projects`]}

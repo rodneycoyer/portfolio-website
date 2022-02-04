@@ -53,11 +53,11 @@ const TagList = styled("li")(({ theme }) => ({
     margin: theme.spacing(0.5)
 }));
 
-const FeaturedProject = ({ data }) => {
+const FeaturedProject = ({ data, props }) => {
     const styles = useStyles();
 
     return (
-        <TopLayout>
+        <TopLayout {...props}>
             <Seo
                 title={data.mdx.frontmatter.title}
                 keywords={data.mdx.frontmatter.tags}
