@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-top-layout`,
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-mui-emotion',
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
