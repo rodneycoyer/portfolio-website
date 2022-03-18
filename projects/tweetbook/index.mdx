@@ -1,0 +1,140 @@
+---
+title: 'Tweetbook'
+
+date: '03-14-2022'
+
+website: ''
+
+github: ''
+
+dockerHub: ''
+
+type: 'learning project'
+
+role: 'creator'
+
+isOpenSource: 'false'
+
+context: ''
+
+year: ''
+
+stack: 'React, Node/Express, MongoDB, Docker, AWS Beanstalk'
+
+short_description: 'Cloud-Native MERN Application'
+
+full_description: 'longer description of the project'
+
+lessons_learned: ''
+
+image01: './gatsby-icon.png'
+image01_alt: 'icon'
+
+image02: './architecture_layout.png'
+image02_alt: 'main folder layout'
+
+image03: ''
+image03_alt: ''
+
+image04: ''
+image04_alt: ''
+
+image05: ''
+image05_alt: ''
+
+tags:
+  [
+    'full-stack',
+    'mern-stack',
+    'html',
+    'css',
+    'react',
+    'node',
+    'express',
+    'mongoose',
+    'mongoDB',
+    'passport-js',
+    'jwt',
+    'https',
+    'server',
+    'api',
+    'OAuth 2.0',
+  ]
+---
+
+# What is Tweetbook?
+
+💡 The goal is to build a cloud-native, full-stack MERN app using some cool libraries and middleware. It would be hosted with an AWS service, like Elastic Beasnstalk, using Docker containers. At first I wasn't sure what to build, but knew I wanted to incorperate some core features as:
+
+- User Login
+  - local-strategy
+  - Google OAuth 2.0
+- Register new user
+  - Store salt / hash passwords with DB
+- Serving static files
+- Protected Routes
+- JWTs
+- RESTful APIs
+- Authentication
+- Upload and serve data from:
+  - Database
+  - Object Storage
+- Docker
+- AWS Services
+
+After building the login page and thinking on it more, this was starting to resemble something like a social-media app. So it was dubbed... Tweetbook 🚀✨
+
+This is an ongoing playground project that will be hydrated with more features and functionality with some extra time. For now, here are the latest updates about the project, architecture, and tech used to build this app.
+
+## Application Architecture
+
+ <details>
+<summary> Overall File Structure </summary>
+
+![Tweetbook file structure](/architecture_all_exp.png "Tweetbook file architecture")
+ </details>
+
+  <details>
+<summary> Client - package.json </summary>
+
+![client package.json](/package.json_client.png "Tweetbook file architecture")
+ </details>
+
+  <details>
+<summary> Server - package.json </summary>
+
+![server package.json](/package.json_server.png "Tweetbook file architecture")
+ </details>
+
+When I started this project, I wanted to develop within a monorepo. The biggest reason was that I would be working in and out of the whole stack. Especially in the beginning while hooking my React and Node apps together. This makes it pretty easy for an organization, like me and my 2 dogs, to put together a strategy and have a singular CI/CD process.
+
+There are alot of opinions and reasons why an organization shouldn't structure their applications this way, but Google, Facebook, Microsoft, Uber, AirBnb and Twitter all use huge monorepos with varing strategies and have alot of success scaling with it 🌟.
+
+## Docker <a href="https://hub.docker.com" target="_blank" rel="noreferrer"><img style="margin-left: .25rem" src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" alt="docker-hub" width="35" height="auto"/></a>
+
+As part of my monorepo strategy, I am developing with Docker containers. This way dev environments never magically change and break, and can be easily shared. Another reason is the DockerImage it will act as a bridge when deploying to a cloud environment.
+
+Since deploying apps and storing data in the cloud is what every company that has a service to offer is doing, what if you want to switch or add additional providers? One way is to use Docker containers because every clould provider has a way to interact with containers.
+
+At the root of the project, I added a Dockerfile and provided instructions to build Tweetbook's DockerImage. The image can then be used to spin up a container that has the project and its application specific environment inside. This will probably change, but for now, the Dockerfile provides instructions for a multi-stage build that generates a Node/Express app that serves static files from the React build.
+
+ <details>
+<summary> DockerFile  </summary>
+
+ ![dockerfile](/dockerfile.png)
+</details>
+
+## AWS Beanstalk <a href="https://aws.amazon.com/elasticbeanstalk/" target="_blank" rel="noreferrer"> <img style="margin-top: 1.5rem; margin-left: .25rem" src="https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/aws/aws-elastic-beanstalk/logo.svg" alt="aws beanstalk" width="30" height="auto"/></a>
+
+With over 200 services available to help manage an apps infrastructure, it's pretty hard to figure out which ones to use. Elastic Beanstalk is a relatively easy way to get an app depolyed and managed.
+It supports Node apps and Docker images which makes this a pretty good fit for Tweetbook. After writing a set of instructions in a Dockerrun.aws.json and reading error logs, an environment was created with these resources:
+
+* EC2 VM
+* Instance Security Group
+* Load Balancer Security Group
+* Auto Scaling Group
+* S3 Bucket
+* Cloud Watch Alarms
+* CloudFormation stack
+
+From here, additional services can be looped in using CloudFront...

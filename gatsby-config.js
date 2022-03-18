@@ -19,16 +19,33 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-mdx`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        root: __dirname,
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 500,
+            },
+          },
+        ],
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
+        path: `${__dirname}/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects-images`,
         path: `${__dirname}/projects`,
       },
     },
@@ -43,6 +60,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`
       },
-    },
+    }
   ],
 };

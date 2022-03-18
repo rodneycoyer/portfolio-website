@@ -18,10 +18,10 @@ import Seo from "../../components/SeoComponent";
 
 const useStyles = makeStyles((theme) => ({
     section: {
-        height: "80vh"
+        height: "60vh"
     },
     hero_img: {
-        height: "80vh",
+        height: "60vh",
         width: "100%",
         objectFit: "cover",
         position: "absolute",
@@ -29,13 +29,13 @@ const useStyles = makeStyles((theme) => ({
     },
     hero_overlay: {
         background: "rgba(0, 0, 0, 0.6)",
-        height: "80vh",
+        height: "60vh",
         width: "100%",
         position: "absolute",
         zIndex: 2,
     },
     hero_heading: {
-        height: "70vh",
+        height: "50vh",
         zIndex: 100,
         position: "relative",
         justifyContent: "center",
@@ -51,6 +51,12 @@ const useStyles = makeStyles((theme) => ({
 
 const TagList = styled("li")(({ theme }) => ({
     margin: theme.spacing(0.5)
+}));
+
+const mdxStyle = styled("div")(({ theme }) => ({
+    h1: {
+        color: "text.secondary"
+    }
 }));
 
 const FeaturedProject = ({ data, props }) => {
@@ -101,8 +107,6 @@ const FeaturedProject = ({ data, props }) => {
             </Paper>
             <Box px={{ xs: 3, sm: 5 }} py={{ xs: 10, sm: 10 }} >
                 <Container maxWidth="md">
-                    <Typography variant="h4" mb={2}> Project Overview </Typography>
-                    <Typography variant="p">{data.mdx.frontmatter.full_description}</Typography>
                     <MDXRenderer>
                         {data.mdx.body}
                     </MDXRenderer>
