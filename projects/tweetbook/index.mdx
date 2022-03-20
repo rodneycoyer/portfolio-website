@@ -84,7 +84,32 @@ tags:
 
 After building the login page and thinking on it more, this was starting to resemble something like a social-media app. So it was dubbed... Tweetbook 🚀✨
 
-This is an ongoing playground project that will be hydrated with more features and functionality with some extra time. For now, here are the latest updates about the project, architecture, and tech used to build this app.
+This is an ongoing playground project that will be hydrated with more features and functionality with some extra time. Here are the latest updates about the project, architecture, and tech used to build this app.
+
+
+
+## Node/Express <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://w7.pngwing.com/pngs/780/57/png-transparent-node-js-javascript-database-mongodb-native-miscellaneous-text-trademark.png" alt="nodejs logo" width="40" height="auto"/></a> <a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png" alt="express.js logo" width="40" height="auto"/></a>
+
+  <details>
+<summary> Server - package.json </summary>
+
+  ![server package.json](/package.json_server.png "Tweetbook file architecture")
+</details>
+
+I wanted to get a server up and running before trying to connect anything with the frontend. At the end of the day, this is the code that will be used to deploy on AWS. Doing this with Node/Express is great for several reasons including:
+
+* **Ease of use** - writing code in js is common and Node.js is a server-side platform built on top of Google's v8 engine.
+* **Fast** - it uses an event loop to handle large amounts of asynchronous I/O events in a non-blocking manner.
+* **REST APIs** - writing RESTful microservices are more flexible and easier to implement than SOAP services.
+
+When an http request is made to the server, route handlers and controllers look at the headers and body and respond back with the appropriate response. Most of the errors are handled by Express.js.
+
+
+## Authentication <a href="https://www.passportjs.org/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://avatars.githubusercontent.com/u/1160530?s=280&v=4" alt="passport.js logo" width="40" height="auto"/></a> <a href="https://www.passportjs.org/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://coursework.vschool.io/content/images/2016/06/jwt.png" alt="passport.js logo" width="40" height="auto"/></a>
+
+## Data Storage <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://code4developers.com/wp-content/uploads/2019/10/MongoDBicon.png" alt="mongodb logo" width="35" height="auto"/></a> <a href="https://aws.amazon.com/pm/serv-s3/?trk=fecf68c9-3874-4ae2-a7ed-72b6d19c8034&sc_channel=ps&sc_campaign=acquisition&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Storage|S3|US|EN|Text&s_kwcid=AL!4422!3!488982706722!e!!g!!aws%20s3&ef_id=Cj0KCQjw29CRBhCUARIsAOboZbJRRosGuyDvkhB_dwWPQlug5EBCIdWcY2xt7kUJ_dcZQZHu9sijLYgaAkNIEALw_wcB:G:s&s_kwcid=AL!4422!3!488982706722!e!!g!!aws%20s3" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 5px; vertical-align: middle" src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/core-aws-services/store-and-retrieve-data-with-aws/images/d5d6add0a50dac23693532aec644c5a6_116-bb-1-a-4-0-a-0-d-46-b-2-863-f-1-d-8-a-362-a-3-c-12.png" alt="aws s3 logo" width="35" height="auto"/></a>
+
+
 
 ## Application Architecture
 
@@ -100,17 +125,11 @@ This is an ongoing playground project that will be hydrated with more features a
 ![client package.json](/package.json_client.png "Tweetbook file architecture")
  </details>
 
-  <details>
-<summary> Server - package.json </summary>
-
-![server package.json](/package.json_server.png "Tweetbook file architecture")
- </details>
-
 When I started this project, I wanted to develop within a monorepo. The biggest reason was that I would be working in and out of the whole stack. Especially in the beginning while hooking my React and Node apps together. This makes it pretty easy for an organization, like me and my 2 dogs, to put together a strategy and have a singular CI/CD process.
 
 There are alot of opinions and reasons why an organization shouldn't structure their applications this way, but Google, Facebook, Microsoft, Uber, AirBnb and Twitter all use huge monorepos with varing strategies and have alot of success scaling with it 🌟.
 
-## Docker <a href="https://hub.docker.com" target="_blank" rel="noreferrer"><img style="margin-left: .25rem" src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" alt="docker-hub" width="35" height="auto"/></a>
+## Docker <a href="https://hub.docker.com" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; vertical-align: -4px" src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" alt="docker-hub" width="40" height="auto"/></a>
 
 As part of my monorepo strategy, I am developing with Docker containers. This way dev environments never magically change and break, and can be easily shared. Another reason is the DockerImage it will act as a bridge when deploying to a cloud environment.
 
@@ -124,7 +143,7 @@ At the root of the project, I added a Dockerfile and provided instructions to bu
  ![dockerfile](/dockerfile.png)
 </details>
 
-## AWS Beanstalk <a href="https://aws.amazon.com/elasticbeanstalk/" target="_blank" rel="noreferrer"> <img style="margin-top: 1.5rem; margin-left: .25rem" src="https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/aws/aws-elastic-beanstalk/logo.svg" alt="aws beanstalk" width="30" height="auto"/></a>
+## AWS Beanstalk <a href="https://aws.amazon.com/elasticbeanstalk/" target="_blank" rel="noreferrer"> <img style="margin-top: 1.5rem; margin-left: .25rem; vertical-align: -7px" src="https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/aws/aws-elastic-beanstalk/logo.svg" alt="aws beanstalk" width="30" height="auto"/></a>
 
 With over 200 services available to help manage an apps infrastructure, it's pretty hard to figure out which ones to use. Elastic Beanstalk is a relatively easy way to get an app depolyed and managed.
 It supports Node apps and Docker images which makes this a pretty good fit for Tweetbook. After writing a set of instructions in a Dockerrun.aws.json and reading error logs, an environment was created with these resources:
