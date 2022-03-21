@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 
 import TopLayout from "../../../plugins/gatsby-plugin-top-layout/TopLayoutComponent";
 import Seo from "../../components/SeoComponent";
+import { text } from "@fortawesome/fontawesome-svg-core";
 
 const useStyles = makeStyles((theme) => ({
     section: {
@@ -53,9 +54,15 @@ const TagList = styled("li")(({ theme }) => ({
     margin: theme.spacing(0.5)
 }));
 
-const mdxStyle = styled("div")(({ theme }) => ({
-    h1: {
-        color: "text.secondary"
+const MarkdownWrapper = styled("div")(({ theme }) => ({
+    p: {
+    color: theme.palette.text.secondary
+    },
+    ul: {
+        color: theme.palette.text.secondary
+    },
+    h2: {
+    color: theme.palette.warning.light
     }
 }));
 
@@ -107,9 +114,11 @@ const FeaturedProject = ({ data, props }) => {
             </Paper>
             <Box px={{ xs: 3, sm: 5 }} py={{ xs: 10, sm: 10 }} >
                 <Container maxWidth="md">
+                    <MarkdownWrapper>
                     <MDXRenderer>
                         {data.mdx.body}
                     </MDXRenderer>
+                    </MarkdownWrapper>
                     <Typography component={"h3"} variant="p" mt={25}>
                         tags 🏷️
                     </Typography>

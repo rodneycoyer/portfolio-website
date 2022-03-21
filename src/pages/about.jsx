@@ -31,11 +31,11 @@ export default function AboutPage(props) {
       />
       <Box>
         <Container maxWidth="md">
-          <Box mt={4}>
+          <Box mt={4} >
             <Typography
               component={"h1"}
               variant="h4"
-              style={{ color: "#f44336" }}
+              sx={{ color: "#f44336" }}
               mt={8}
               mb={2}
             >
@@ -43,12 +43,12 @@ export default function AboutPage(props) {
           </Typography>
           </Box>
           <Box>
-            <Typography variant={"div"}>
+            <Typography variant={"div"} color="text.secondary">
                I'm a software engineer in the greater Seattle area. Welcome to my space in the web where I share some things I've learned.
             </Typography>
             <br />
             <br />
-            <Typography component={"div"} variant="p">
+            <Typography variant="p" color="text.secondary">
               I have a lot of fun working on web, mobile, and cloud apps and contributing to Open Source projects.
               I seek knowledge and understanding so I build projects, read articles, listen to podcasts, and contribute code in my spare time.
             <br />
@@ -69,11 +69,11 @@ export default function AboutPage(props) {
               <strong> What am I working on? </strong>
             </Typography>
 
-            <Typography variant="button"> updated: 03/20/2022 </Typography>
+            <Typography variant="button"> <em> updated: 03/20/2022 </em> </Typography>
 
             <ul>
               <li> Updating my cloud app </li>
-              <li> Writing short articles about my apps </li>
+              <li> Writing project write-ups </li>
               <li> Applying for a new job </li>
             </ul>
           </Box>
@@ -86,7 +86,7 @@ export default function AboutPage(props) {
             >
               <strong> Connect wit Me </strong>
             </Typography>
-            <Typography variant="p"> The easiest way to reach me is via email: rodneycoyer@gmail.com.
+            <Typography variant="p" color="text.secondary"> The easiest way to reach me is via email: rodneycoyer@gmail.com.
               <br />
               <br />
             You can also find me on:
@@ -130,18 +130,19 @@ export default function AboutPage(props) {
             >
               <strong> Some Random Things </strong>
             </Typography>
-
-            <ul>
-              <li> I built my first html website with Netscape back in 2001. </li>
-              <li> I grill and smoke foods in any weather. </li>
-              <li> I play finger-style guitar. </li>
-              <li> I have 2 dogs: BoBo and Bailee. </li>
-              <li> My favorite video game is either Legend of Zelda: Ocarina of Time, or Final Fantasy Tactics </li>
-              <li> I ride on things with 2 or more wheels. </li>
-              <li> I have 3 ukuleles. </li>
-              <li> I rode a motorcycle from Tacoma to Denver. Then back going through Reno and Crater Lake.</li>
-              <li> Before coding, I worked on High-Rise Buildings in DT Austin as a Project Manager.</li>
-            </ul>
+            <Typography  color="text.secondary" variant="p">
+              <ul>
+                <li> I built my first html website with Netscape back in 2001. </li>
+                <li> I grill and smoke foods in any weather. </li>
+                <li> I play finger-style guitar. </li>
+                <li> I have 2 dogs: BoBo and Bailee. </li>
+                <li> My favorite video game is either Legend of Zelda: Ocarina of Time, or Final Fantasy Tactics </li>
+                <li> I ride on things with 2 or more wheels. </li>
+                <li> I have 3 ukuleles. </li>
+                <li> I rode a motorcycle from Tacoma to Denver. Then back going through Reno and Crater Lake.</li>
+                <li> Before coding, I worked on High-Rise Buildings in DT Austin as a Project Manager.</li>
+              </ul>
+            </Typography>
           </Box>
         </Container>
       </Box>
