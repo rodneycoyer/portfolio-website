@@ -15,7 +15,6 @@ import Typography from "@mui/material/Typography";
 
 import TopLayout from "../../../plugins/gatsby-plugin-top-layout/TopLayoutComponent";
 import Seo from "../../components/SeoComponent";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 const useStyles = makeStyles((theme) => ({
     section: {

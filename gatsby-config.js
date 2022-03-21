@@ -9,6 +9,7 @@ module.exports = {
     FAST_DEV: true,
     DEV_SSR: true,
     PARALLEL_SOURCING: true,
+    PARALLEL_QUERY_RUNNING: true
   },
   plugins: [
     `gatsby-plugin-top-layout`,
