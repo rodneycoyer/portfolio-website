@@ -114,9 +114,9 @@ const FeaturedProject = ({ data, props }) => {
             <Box px={{ xs: 3, sm: 5 }} py={{ xs: 10, sm: 10 }} >
                 <Container maxWidth="md">
                     <MarkdownWrapper>
-                    <MDXRenderer>
-                        {data.mdx.body}
-                    </MDXRenderer>
+                        <MDXRenderer>
+                            {data.mdx.body}
+                        </MDXRenderer>
                     </MarkdownWrapper>
                     <Typography component={"h3"} variant="p" mt={25}>
                         tags 🏷️

@@ -84,9 +84,9 @@ export default function AboutPage(props) {
               style={{color: "#ffa726"}}
               mt={4} mb={1}
             >
-              <strong> Connect wit Me </strong>
+              <strong> Connect with Me </strong>
             </Typography>
-            <Typography variant="p" color="text.secondary"> The easiest way to reach me is via email: rodneycoyer@gmail.com.
+            <Typography variant="p" color="text.secondary"> The easiest way to reach me is via email: rodneycoyer@gmail.com
               <br />
               <br />
             You can also find me on:
@@ -133,11 +133,12 @@ export default function AboutPage(props) {
             <Typography  color="text.secondary" variant="p">
               <ul>
                 <li> I built my first html website with Netscape back in 2001. </li>
-                <li> I grill and smoke foods in any weather. </li>
-                <li> I play finger-style guitar. </li>
                 <li> I have 2 dogs: BoBo and Bailee. </li>
-                <li> My favorite video game is either Legend of Zelda: Ocarina of Time, or Final Fantasy Tactics </li>
+                <li> I hail from House Ravenclaw 🦅 </li>
+                <li> I play finger-style guitar. </li>
+                <li> My favorite video game is either Legend of Zelda: Ocarina of Time, or Final Fantasy Tactics  </li>
                 <li> I ride on things with 2 or more wheels. </li>
+                <li> I grill and smoke foods in any weather. </li>
                 <li> I have 3 ukuleles. </li>
                 <li> I rode a motorcycle from Tacoma to Denver. Then back going through Reno and Crater Lake.</li>
                 <li> Before coding, I worked on High-Rise Buildings in DT Austin as a Project Manager.</li>
