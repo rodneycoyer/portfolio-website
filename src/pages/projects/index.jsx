@@ -134,15 +134,18 @@ export default function ProjectIndex({ data, props}) {
         keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `projects`]}
       />
       <Container maxWidth="lg">
-          <Box mt={4}>
+          <Box mt={4} mb={8}>
             <Typography
               component={"h2"}
-              variant="h2"
+              variant="h3"
               style={{color: "#f44336"}}
-              mt={8} mb={8}
+              mt={8} mb={2}
             >
-            <strong> projects.map</strong>
-          </Typography>
+              <strong>PROJECT WALL</strong>
+            </Typography>
+            <Typography variant="p" color={"text.secondary"}>
+              You can read about some of my projects here. Continue to check in see what I'm working on!
+            </Typography>
           </Box>
       </Container>
       <Box>

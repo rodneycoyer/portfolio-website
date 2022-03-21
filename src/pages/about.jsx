@@ -13,7 +13,7 @@ import TopLayout from "../../plugins/gatsby-plugin-top-layout/TopLayoutComponent
 const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
-    color: "white",
+    color: "#fff",
     "&:hover": {
       color: '#f44336'
     },

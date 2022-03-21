@@ -57,7 +57,7 @@ export default function HeroSection() {
         >
           <Grow in={shouldShow} timeout={{enter: 1500}} component="div">
             <Grid item mr={14} ml={2}>
-              <Typography component="div" variant="h1" color="#2196f3">
+              <Typography component="div" variant="h1" color="#0288d1">
               <strong>Hello World_</strong>
               </Typography>
 
@@ -68,7 +68,7 @@ export default function HeroSection() {
                       .pauseFor(500)
                       .typeString(`I'm Rod and this is my`)
                       .pauseFor(350)
-                      .typeString('<br/><span style="color: #ff5722;"><strong> portfolio site.</strong></span>')
+                      .typeString('<br/><span style="color: #f44336;"><strong> portfolio site.</strong></span>')
                       .start();
                   }}
                 />
