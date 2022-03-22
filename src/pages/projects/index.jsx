@@ -49,23 +49,23 @@ function RenderProjectCard({ data, node }) {
   return (
     <Card className={styles.card} type={node.frontmatter.isOpenSource} key={node.id}>
       <CardActionArea>
-      <CardMedia component="div" >
-        <Link to={`/projects/${node.slug}`}>
-          <GatsbyImage
-            id="image"
-            image={getImage(node.frontmatter.image01)}
-            alt={node.frontmatter.image01_alt}
-          />
-        </Link>
-      </CardMedia>
-        <CardContent>
-          <Typography variant="h5">
+        <Link style={{textDecoration: "none"}} to={`/projects/${node.slug}`}>
+          <CardMedia component="div" >
+            <GatsbyImage
+              id="image"
+              image={getImage(node.frontmatter.image01)}
+              alt={node.frontmatter.image01_alt}
+            />
+          </CardMedia>
+          <CardContent>
+          <Typography variant="h5" color="text.secondary">
             {node.frontmatter.title}
           </Typography>
-          <Typography variant="body" color="secondary" noWrap>
+          <Typography variant="body" color="warning.light" noWrap>
             {node.frontmatter.short_description}
           </Typography>
-        </CardContent>
+          </CardContent>
+        </Link>
         </CardActionArea>
       <CardActions disableSpacing>
         <Box style={{ marginRight: "auto" }}>
@@ -128,7 +128,7 @@ export default function ProjectIndex({ data, props}) {
     ));
 
   return (
-    <TopLayout {...props}>
+    <TopLayout>
       <Seo
         title="Projects"
         keywords={[`gatsby`, `react`, `material-ui`, `graphql`, `portfolio`, `javascript`, `projects`]}
@@ -137,14 +137,14 @@ export default function ProjectIndex({ data, props}) {
           <Box mt={4} mb={8}>
             <Typography
               component={"h2"}
-              variant="h3"
+              variant="h4"
               style={{color: "#f44336"}}
               mt={8} mb={2}
             >
-              <strong>PROJECT WALL</strong>
+              <strong>PROJECT BOARD</strong>
             </Typography>
             <Typography variant="p" color={"text.secondary"}>
-              You can read about some of my projects here. Continue to check in see what I'm working on!
+              This is where I post my cooler stuff. Continue to check in see what I'm working on!
             </Typography>
           </Box>
       </Container>

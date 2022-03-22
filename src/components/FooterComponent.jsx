@@ -50,17 +50,17 @@ const Footer = () => {
                                 <GitHubIcon />
                             </IconButton>
                         </Link>
-                        <Link href="">
-                            <IconButton>
-                                <FontAwesomeIcon icon={faDocker} />
-                            </IconButton>
-                        </Link>
                         <Link
                             href="https://twitter.com/rodneycoyer"
                             target="blank"
                         >
                             <IconButton>
                                 <TwitterIcon />
+                            </IconButton>
+                        </Link>
+                        <Link href="https://hub.docker.com/repositories">
+                            <IconButton>
+                                <FontAwesomeIcon icon={faDocker} />
                             </IconButton>
                         </Link>
                         <Link

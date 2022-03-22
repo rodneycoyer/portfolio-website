@@ -44,7 +44,7 @@ export default function AboutPage(props) {
           </Box>
           <Box>
             <Typography variant={"div"} color="text.secondary">
-               I'm a software engineer in the greater Seattle area. Welcome to my space in the web where I share some things I've learned.
+               Hi and Welcome 👋 I'm Rod and I'm a software engineer in the greater Seattle area 🌲. Welcome to my space in the web where I share some of the things I've built and learned.
             </Typography>
             <br />
             <br />
@@ -56,7 +56,7 @@ export default function AboutPage(props) {
               When I'm not pushing code, you can find me in the outdoors on an adventure, working a bbq-smoker, or dunking oreo's.
             <br />
             <br />
-              You can check out some of my <Link to="/projects" className={styles.link}> <strong><em> projects here </em></strong> </Link>, or at one my <a className={styles.link} href="https://github.com/rodneycoyer" target="blank" aria-label="github link"><strong><em> gitHub repo </em></strong></a>.
+              You can check out some of my <Link to="/projects" className={styles.link}> <strong> projects here </strong> </Link>, or at one my <a className={styles.link} href="https://github.com/rodneycoyer" target="blank" aria-label="github link"><strong> gitHub repo </strong></a>.
             </Typography>
           </Box>
           <Box>
@@ -86,7 +86,7 @@ export default function AboutPage(props) {
             >
               <strong> Connect with Me </strong>
             </Typography>
-            <Typography variant="p" color="text.secondary"> The easiest way to reach me is via email: rodneycoyer@gmail.com
+            <Typography variant="p" color="text.secondary"> The easiest way to reach me is via email:<Link href="mailto:rodney.coyer@gmail.com" target="blank" className={styles.link}> rodneycoyer@gmail.com </Link>
               <br />
               <br />
             You can also find me on:
@@ -128,13 +128,13 @@ export default function AboutPage(props) {
               style={{color: "#ffa726"}}
               mt={4} mb={1}
             >
-              <strong> Some Random Things </strong>
+              <strong> Random Facts </strong>
             </Typography>
             <Typography  color="text.secondary" variant="p">
               <ul>
                 <li> I built my first html website with Netscape back in 2001. </li>
                 <li> I have 2 dogs: BoBo and Bailee. </li>
-                <li> I hail from House Ravenclaw 🦅 </li>
+                <li> House Ravenclaw 🦅 </li>
                 <li> I play finger-style guitar. </li>
                 <li> My favorite video game is either Legend of Zelda: Ocarina of Time, or Final Fantasy Tactics  </li>
                 <li> I ride on things with 2 or more wheels. </li>

@@ -1,10 +1,9 @@
 import * as React from "react";
 
-import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import { makeStyles } from "@mui/styles";
+import makeStyles from "@mui/styles/makeStyles";
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -15,7 +14,7 @@ import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
 
 const useStyles = makeStyles((theme) => ({
     icon: {
-        color: "#f44336",
+        color: "#0288d1",
         "&:hover": {
             color: "#c5cae9"
         }
@@ -28,7 +27,7 @@ const Social = ({ direction }) => {
     return (
         <Stack container direction={direction || "row"} spacing={2} pt={2}>
             <Link
-                to="https://www.linkedin.com/in/rodney-coyer-b2922b72/"
+                href="https://www.linkedin.com/in/rodney-coyer/"
                 target="blank"
             >
                 <IconButton>
@@ -36,7 +35,7 @@ const Social = ({ direction }) => {
                 </IconButton>
             </Link>
             <Link
-                to="https://github.com/rodneycoyer"
+                href="https://github.com/rodneycoyer"
                 target="blank"
             >
                 <IconButton>
@@ -44,7 +43,7 @@ const Social = ({ direction }) => {
                 </IconButton>
             </Link>
             <Link
-                to="https://twitter.com/rodneycoyer"
+                href="https://twitter.com/rodneycoyer"
                 target="blank"
             >
                 <IconButton>
@@ -52,7 +51,7 @@ const Social = ({ direction }) => {
                 </IconButton>
             </Link>
             <Link
-                to=""
+                href="https://hub.docker.com/repositories"
                 target="blank"
             >
                 <IconButton>
