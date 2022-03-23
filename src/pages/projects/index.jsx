@@ -20,26 +20,20 @@ import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDocker } from "@fortawesome/free-brands-svg-icons";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 
 import Seo from "../../components/SeoComponent";
 import TopLayout from "../../../plugins/gatsby-plugin-top-layout/TopLayoutComponent";
 
 const useStyles = makeStyles((theme) => ({
   link: {
-    textDecoration: "none",
-    color: "white",
     "&:hover": {
-      color: '#f44336'
+      color: theme.palette.primary.dark
     },
-  },
-  card: {
-    overflow: "hidden",
-  },
-  pageLink: {
-    marginRight: "auto"
   }
 }));
 
@@ -47,7 +41,7 @@ function RenderProjectCard({ data, node }) {
   const styles = useStyles();
 
   return (
-    <Card className={styles.card} type={node.frontmatter.isOpenSource} key={node.id}>
+    <Card className={styles.card} type={node.frontmatter.isOpenSource} key={node.id} aria-label="project card">
       <CardActionArea>
         <Link style={{textDecoration: "none"}} to={`/projects/${node.slug}`}>
           <CardMedia component="div" >
@@ -58,31 +52,36 @@ function RenderProjectCard({ data, node }) {
             />
           </CardMedia>
           <CardContent>
-          <Typography variant="h5" color="text.secondary">
+          <Typography variant="h5" color="text.primary">
             {node.frontmatter.title}
           </Typography>
-          <Typography variant="body" color="warning.light" noWrap>
+          <Typography variant="body" color="warning.dark" noWrap>
             {node.frontmatter.short_description}
           </Typography>
           </CardContent>
         </Link>
         </CardActionArea>
-      <CardActions disableSpacing>
+      <CardActions disableSpacing aria-label="project links">
         <Box style={{ marginRight: "auto" }}>
-          <a href={node.frontmatter.github}>
-            <IconButton>
+          <a href={node.frontmatter.website}>
+            <IconButton className={styles.link}>
+              <FontAwesomeIcon icon={faGlobe} size="sm" />
+            </IconButton>
+          </a>
+          <a href={node.frontmatter.github} >
+            <IconButton className={styles.link}>
               <FontAwesomeIcon icon={faGithub} size="sm" />
             </IconButton>
           </a>
           <a href={node.frontmatter.dockerHub}>
-            <IconButton>
+            <IconButton className={styles.link}>
               <FontAwesomeIcon icon={faDocker} size="sm" />
             </IconButton>
           </a>
         </Box>
         <Box >
           <Link to={`/projects/${node.slug}`}>
-            <IconButton style={{ justifySelf: "end" }}>
+            <IconButton className={styles.link} style={{ justifySelf: "end" }}>
               <FontAwesomeIcon icon={faExpand} size="sm" />
             </IconButton>
           </Link>
@@ -138,7 +137,7 @@ export default function ProjectIndex({ data, props}) {
             <Typography
               component={"h2"}
               variant="h4"
-              style={{color: "#f44336"}}
+              color="error"
               mt={8} mb={2}
             >
               <strong>PROJECT BOARD</strong>
@@ -157,7 +156,7 @@ export default function ProjectIndex({ data, props}) {
               <Tab label="open source" />
             </Tabs>
           </Box>
-          <Grid container spacing={2} ref={containerRef}>
+          <Grid container spacing={2} ref={containerRef} aria-label="project grid">
             {tabValue === 0 && directory}
             {tabValue === 1 && learningProject}
             {tabValue === 2 && isOpenSource}

@@ -44,7 +44,7 @@ export default function AboutPage(props) {
           </Box>
           <Box>
             <Typography variant={"div"} color="text.secondary">
-               Hi and Welcome 👋 I'm Rod and I'm a software engineer in the greater Seattle area 🌲. Welcome to my space in the web where I share some of the things I've built and learned.
+               Hi and Welcome 👋 I'm Rod and I'm a software engineer in the greater Seattle area 🌲. Welcome to my space in the web where I will share some of the things I've built and learned.
             </Typography>
             <br />
             <br />

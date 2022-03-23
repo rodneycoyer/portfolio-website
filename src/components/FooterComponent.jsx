@@ -58,7 +58,10 @@ const Footer = () => {
                                 <TwitterIcon />
                             </IconButton>
                         </Link>
-                        <Link href="https://hub.docker.com/repositories">
+                        <Link
+                            href="https://hub.docker.com/repositories"
+                            target="blank"
+                        >
                             <IconButton>
                                 <FontAwesomeIcon icon={faDocker} />
                             </IconButton>

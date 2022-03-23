@@ -55,13 +55,13 @@ const TagList = styled("li")(({ theme }) => ({
 
 const MarkdownWrapper = styled("div")(({ theme }) => ({
     p: {
-    color: theme.palette.text.secondary
+        color: theme.palette.text.secondary
     },
     ul: {
         color: theme.palette.text.secondary
     },
     h2: {
-    color: theme.palette.warning.light
+        color: theme.palette.warning.light
     }
 }));
 
@@ -85,10 +85,10 @@ const FeaturedProject = ({ data, props }) => {
                 <Container maxWidth="xl" >
                     <Grid container className={styles.hero_heading} align="center" >
                         <Grid item mt={6}>
-                            <Typography component="h1" variant="h2">
+                            <Typography component="h1" variant="h2" >
                                 <strong> {data.mdx.frontmatter.title} </strong>
                             </Typography>
-                            <Typography component="h2" variant="h5" color="secondary">
+                            <Typography component="h2" variant="h5" color="warning.dark">
                                 {data.mdx.frontmatter.short_description}
                             </Typography>
                         </Grid>
@@ -96,16 +96,16 @@ const FeaturedProject = ({ data, props }) => {
                     <Hidden smDown>
                         <Grid container className={styles.hero_footer} align="center" justifyContent="space-between" spacing={1}>
                             <Grid item xs={3}>
-                                <Typography variant="button" color="secondary"> type </Typography>
-                                <Typography variant="h6">{data.mdx.frontmatter.type}</Typography>
+                                <Typography variant="button" color="warning.dark"> type </Typography>
+                                <Typography variant="h6" color="text.secondary">{data.mdx.frontmatter.type}</Typography>
                             </Grid>
                             <Grid item xs={3}>
-                                <Typography variant="button" color="secondary"> framework </Typography>
-                                <Typography variant="h6">{data.mdx.frontmatter.stack}</Typography>
+                                <Typography variant="button" color="warning.dark"> framework </Typography>
+                                <Typography variant="h6" color="text.secondary">{data.mdx.frontmatter.stack}</Typography>
                             </Grid>
                             <Grid item xs={3}>
-                                <Typography variant="button" color="secondary"> role </Typography>
-                                <Typography variant="h6">{data.mdx.frontmatter.role}</Typography>
+                                <Typography variant="button" color="warning.dark"> role </Typography>
+                                <Typography variant="h6" color="text.secondary">{data.mdx.frontmatter.role}</Typography>
                             </Grid>
                         </Grid>
                     </Hidden>
