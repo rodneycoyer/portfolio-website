@@ -35,14 +35,14 @@ module.exports = {
         ],
       },
     },
-    {
+    { // mdx files
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
         path: `${__dirname}/projects`,
       },
     },
-    {
+    { // mdx image processing
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects-images`,
