@@ -20,7 +20,7 @@ type: "learning"
 
 year: ""
 
-stack: "Gatsby, GraphQL, MongoDB, Netlify, Gatsby Cloud"
+stack: "Gatsby, GraphQL, Node.js, MongoDB, Netlify, Gatsby Cloud"
 
 short_description: "Family Recipes && Portfolio Page"
 
@@ -28,7 +28,7 @@ full_description: "longer description of the project"
 
 lessons_learned: ""
 
-image01: "./image01.png"
+image01: "./featured2.png"
 image01_alt: "recipes index page"
 
 image02: ""
@@ -49,57 +49,60 @@ tags: ["jamstack", "gatsby", "graphQl", "react", "react-bootstrap", "netlify", "
 
 *updated : 3/20/2022
 
-## Mission
+## Overview
 
-I was listening to an interview on Software Engineering Daily (SED) and the host was interviewing an Engineer from Netlify. They were discussing building projects with Jamstack and deploying to cloud providers like AWS or Netlify.
+I was listening to an interview on Software Engineering Daily and the host was interviewing an Engineer from Netlify. The topic was Netlify and Jamstack. Where it came from, the problems it solved, how it's trending, and where they believe it's headed.
 
-I wanted to explore and learn about about these conepts, build and deployments strategies. I ended up building and deploying a couple of projects, including this website, with Jamstack technologies and contributing to Netlify CLI 🎉.
+After listening, I wanted to explore and learn about these concepts as well as the serverless landscape developers are using to deploy their builds. Great timing too because I wanted to build a new portfolio-site. So I ended up creating and deploying a couple of projects and contributing to Netlify CLI 🎉.
 
-In this write up, I'll be looking over the 2 Jamstack projects built.
-
-## Jamstack <a href="https://jamstack.org/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 6px; vertical-align: -12px" src="https://do3z7e6uuakno.cloudfront.net/uploads/event/logo/1093832/2a813938a009bfe6d3e60be5902a502d.png" alt="jamstack logo" width="40" height="auto"/></a>
-
-Its an architecture style that is powered with Javascript, APIs, and Markup. It's easy to develop with, content is served faster, easier to scale, and more secure than the traditional approach. Prerendered content such as, static files, are served to a CDN and hydrated when its building, orloading, using serverless functions, hooks, and APIs.
-
-<br />
-
-<img src="./jamstackVSmono.png" alt="jamstack vs monolithic design - Netlify" />
-
-<br />
+In this write up, I'll be looking over 2 Jamstack projects I created including my portfolio-site.
 
 ## Goals
 
 These are some core features and concepts I wanted to learn and practice:
 
-- Material UI
 - GraphQL - Schemas, Queries and Mutations
 - API Plugins
-- Gatsby Plugins
-  - images
-- Programmatically create:
-  - resource pages
-  - resource fs directories
+- Programmatically create resources:
+  - pages
   - links
   - fs directories
 - Connect with MongoDB
 - Deploy Build
   - Netlify
   - Gatsby Cloud
-- Docker
 
-In the end, when a user make a request to the browser, appropriate static contents will be sent back to the user and hydrated while the app is building, or loading. During deveopment, when production changes are ready, the project repo is monitored and deployed with Netlify or Gatsby Cloud.
+## Jamstack? <a href="https://jamstack.org" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 6px; vertical-align: -12px" src="https://do3z7e6uuakno.cloudfront.net/uploads/event/logo/1093832/2a813938a009bfe6d3e60be5902a502d.png" alt="jamstack logo" width="40" height="auto"/></a> <a href="https://www.netlify.com/jamstack" target="_blank" rel="noreferrer"> <img style="margin-left: .25rem; vertical-align: -9px" src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" alt="netlify cli" width="35" height="auto"/></a>
 
-## Static Sites with Gatsby <a href="https://gatsbyjs.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://www.datocms-assets.com/205/1624021714-cover.png?w=300" alt="gatsby.js logo" width="40" height="auto"/></a>
+It's an architecture style that is powered with Javascript, APIs, and Markup. It's easy to develop with because everything is in Javascript or Markdown. Content is securly served faster and is easier to scale than most other approaches. Prerendered content is packaged into optimized static assets and is served to a CDN. The static content is then hydrated when it’s deployed using APIs and serverless functions, like AWS Lambda.
 
-There are several static-site generators as Next.js or Hugo, I decided to do this with Gatsby for good reason. It's React based, there's excellent documentation, and there's a huge community! It also comes with alot of built-ins related to file-system, images, and routing to name a few.
 
-I used React-Bootstrap for the recipe-site, and Material-UI for my portfolio-site as the main style libraries. I'm currently in the middle of migrating from material-ui v3 and updating my useStyles to styled-components.
+<div style="margin-top: 4rem; margin-bottom: 4rem"/>
+  <img src="./jamstackVSmono.png" alt="jamstack vs monolithic design - Netlify" />
+<div />
+
+## Static Sites with Gatsby <a href="https://gatsbyjs.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://www.datocms-assets.com/205/1624021714-cover.png?w=300" alt="gatsby.js logo" width="40" height="auto"/></a> <a href="https://mui.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://mui.com/static/logo.png" alt="mui logo" width="40" height="auto"/></a> <a href="https://react-bootstrap.github.io/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 6px; vertical-align: -12px" src="https://crowdcast-prod.imgix.net/-KHhIzuATU2K4OVPd2sP/event-cover-5388?w=800" alt="reactstrap logo" width="40" height="auto"/></a>
+
+There are several static-site generators such as Next.js or Hugo. These tools are used to generate a full static HTML website thats served to the user before its hydrated with javascript. I decided to do this with Gatsby. It's React based, there's excellent documentation, and there's a huge community! It's also great for SEO engine crawlers that help sites rank higher.
+
+I used React-Bootstrap for the recipe-site, and Material-UI for my portfolio-site as the main style libraries. I'm currently in the middle of migrating from material-ui v3 and updating my useStyles to styled-components. Both libraries are fun to work with and each has good documentation to reference.
+
+
+  <details>
+<summary> Family Recipes - recipe index </summary>
+
+  ![family recipes landing page](/image01.png)
+</details>
+
+  <details>
+<summary> Portfolio Site - navigation modal </summary>
+
+  ![portfolio nav modal](/portfolio-landing.png)
+</details>
 
 ## GraphQL <a href="https://graphql.org/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png" alt="graphql logo" width="40" height="auto"/></a>
 
-This is probably the most valuable knowledged gained from building these projects. When you send a query, you get an exact and predictable result back... that's it! To test queries and mutations, there are tools similar to Gatsby's GraphiQL IDE browser tool developers can use such as Apollo's GraphQL Playground.
-
-Data was being queried from local files, metatdata, and MongoDB Atlas clusters. The data was then used to build directories, index pages, navigation links, and size images for each resource.
+Probably the most valuable knowledge gained from building these projects. When you send a query, you get an exact and predictable result back... that's it! To test queries and mutations, Gatsby has a GraphiQL IDE browser tool developers can use to test queries. Other tools are available such as Apollo's GraphQL Playground.
 
   <details>
 <summary> GraphiQL IDE </summary>
@@ -107,8 +110,40 @@ Data was being queried from local files, metatdata, and MongoDB Atlas clusters. 
   ![graphiQL query](/portfolio-graphiql.png)
 </details>
 
-## Plugins
+But this is where some of the limitations of Gatsby and static-site-generators come into full display. Gatsby is pretty opinionated with how GraphQL and Node.js is baked in. In order to make dynamic data mutations such as POST, PUT, or DELETE, there is a lot of extra configuration work that has to be done for the project to trigger an update and re-build. This can lead to poor performance if you have a lot of data updating frequently.
 
-## MongoDB
+## API Plugins <a style="text-decoration: none" href="https://www.gatsbyjs.com/plugins" alt="gatsby plugins"> 🔌 </a>
 
-## Deploy
+The functionality behind the static pages. There are many types available and each are aimed at providing a microservices solution you can plugin to your app. Some of these services include: online payments, image processing, database connections, analytics, offline performance, etc. Developers can build their own plugins too, if needed.
+
+A neat feature with plugins are the configurations developers can manipulate. Such as processing images into consistent sizes and how they load, or what part of the directory to source data and resources from.
+
+## Node.js & MongoDB Plugins <a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-nodejs/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://w7.pngwing.com/pngs/780/57/png-transparent-node-js-javascript-database-mongodb-native-miscellaneous-text-trademark.png" alt="nodejs logo" width="40" height="auto"/></a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://code4developers.com/wp-content/uploads/2019/10/MongoDBicon.png" alt="mongodb logo" width="40" height="auto"/></a>
+
+Node.js is baked into Gatsby and handles most of the initial data rendering. However there's a plugin that allows you to create a custom Node/Express server which was used to connect with MongoDB Atlas.
+
+  <details>
+<summary> Custom Node Server </summary>
+
+  ![graphiQL query](/recipe-server.png)
+</details>
+
+  <details>
+<summary> Recipes - config.js </summary>
+
+  ![graphiQL query](/recipes-config.png)
+</details>
+
+  <details>
+<summary> Portfolio - config.js </summary>
+
+  ![graphiQL query](/portfolio-config.png)
+</details>
+
+By nature of design, data flows one-way limiting the ways users can dynamically POST, PUT, or DELETE data to the DB. Although adding these features are more difficult than setting up a traditional server, it can be done with more plugins, configurations and a performance cost.
+
+## Deployment <a href="https://www.netlify.com/products/build" target="_blank" rel="noreferrer"> <img style="margin-left: .25rem; vertical-align: middle" src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" alt="netlify build" width="auto" height="35"/></a> <a href="https://www.gatsbyjs.com/products/cloud/" target="_blank" rel="noreferrer"> <img style="margin-left: .25rem; vertical-align: middle" src="https://www.datocms-assets.com/205/1624021714-cover.png?w=300" alt="gatsby cloud" width="auto" height="40"/></a>
+
+## Conclusions 💭
+
+There are also services available that allow serverless communication to their databases directly such as MongoDB Realm and Firebase.
