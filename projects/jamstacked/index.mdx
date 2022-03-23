@@ -100,7 +100,7 @@ I used React-Bootstrap for the recipe-site, and Material-UI for my portfolio-sit
 
 ## GraphQL <a href="https://graphql.org/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png" alt="graphql logo" width="40" height="auto"/></a>
 
-GraphQL is an API query language and uses a type system to define data. It has its own layer between the frontent and backend that executes queries during server-side runtime. GraphQL Queries take in arguments and query-parameters then responds with json data objects.
+GraphQL is an API query language and uses a type system to define data. It has its own layer between the frontend and backend that executes queries during server-side runtime. GraphQL Queries take in arguments and query-parameters then respond back with JSON data objects.
 
 Probably the most valuable knowledge gained from building these projects. When a query is sent, an exact and predictable response is returned. Queries can be constructed to pull data from multiple resources with a single API call. There's also an Integrated Development Environment (IDE) to test queries and mutations.
 
@@ -113,7 +113,7 @@ Probably the most valuable knowledge gained from building these projects. When a
 
 ## API Plugins <a style="text-decoration: none" href="https://www.gatsbyjs.com/plugins" alt="gatsby plugins"> 🔌 </a>
 
-APIs are the functionality behind the static pages. There are many types available and each are aimed at providing a microservices solution to plugin directly into an app. Some of these services include: online payments, image processing, database connections, analytics, offline performance, etc. Plugins are reusable and developers can build their own too, if needed. Gatsby also has some built-ins like, Link, Router, and createPages to name a few.
+APIs are the functionality behind the static pages. There are many types available and each is aimed at providing a microservices solution to plugin directly into an app. Some of these services include: online payments, image processing, database connections, analytics, offline performance, etc. Plugins are reusable and developers can build their own too, if needed. Gatsby also has some built-ins like, Link, Router, and createPages to name a few.
 
   <details>
 <summary> Recipes - config.js </summary>
@@ -129,7 +129,7 @@ APIs are the functionality behind the static pages. There are many types availab
 
 ## Node.js & MongoDB Plugins <a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-nodejs/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://w7.pngwing.com/pngs/780/57/png-transparent-node-js-javascript-database-mongodb-native-miscellaneous-text-trademark.png" alt="nodejs logo" width="40" height="auto"/></a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://code4developers.com/wp-content/uploads/2019/10/MongoDBicon.png" alt="mongodb logo" width="40" height="auto"/></a>
 
-Node.js is baked into Gatsby and handles most of the initial data rendering. However there's a plugin that allows the creating of a custom Node/Express server which can be used to connect to a preferred backend. I used it to connect with a MongoDB Atlas cluster. Anytime new data is added, new resources links, pages, and directories are automoatically generated.
+Node.js is baked into Gatsby and handles most of the initial data rendering. However there's a plugin that allows the creation of a custom Node/Express server which can be used to connect to a preferred backend. I used it to connect with a MongoDB Atlas cluster. Anytime new data is added, new resource links, pages, and directories are automatically generated.
 
   <details>
 <summary> Custom Node Server </summary>
@@ -145,20 +145,22 @@ Both of these projects are hosted on Netlify and Gatsby Cloud. Setting everythin
 
 ## Conclusions 💭
 
-It's pretty easy to understand why there's been alot of traction in the Jamestack movement. It's a way to deliver fast websites without fussing with server setups. API plugins also keep everything simple and secure.
+It's pretty easy to understand why there's been a lot of traction in the Jamestack movement. It's a way to deliver fast websites without fussing with server setups. API plugins also keep everything simple and secure.
 
-Using GraphQL for API queries as an alternative to REST definately has its place and can understand why Facebook spent its resources developing and implementing this tech into their apps.
+Using GraphQL for API queries as an alternative to REST definitely has its place and can understand why Facebook spent its resources developing and implementing this tech into their apps.
 
-By nature of design, data flows one-way limiting the ways users can dynamically POST, PUT, or DELETE data to the DB.
+But there are limitations with Gatsby and static-site-generators as well. For instance, Gatsby is pretty opinionated with how GraphQL and Node.js works and is baked in. By nature of design, data flows one-way, limiting the ways users can dynamically POST, PUT, or DELETE data to the DB.
 
-But there are limitations with Gatsby and static-site-generators as well. For instance, Gatsby is pretty opinionated with how GraphQL and Node.js works and is baked in. In order to make dynamic data mutations such as POST, PUT, or DELETE, there is a lot of extra configuration work that has to be done to trigger an update and re-build. This can lead to poor performance if you have a lot of data updating frequently. Another example are plugin side-effecets. As an application grows in complexity, so do the plugins and configurations. Some plugins require other plugins or extra engineering to make work. Although adding these features may be more difficult than setting up a traditional server, in some cases, it can be done with more plugins, configurations, and possible performance costs.
+In order to make dynamic data mutations such as POST, PUT, or DELETE, there is a lot of extra configuration work that has to be done to trigger an update and re-build. This can lead to poor performance if you have a lot of data updating frequently. Another example are plugin side-effects. As an application grows in complexity, so do the plugins and configurations. Some plugins require other plugins or extra engineering to make work. Although adding these features may be more difficult than setting up a traditional server, in some cases, it can be done with more plugins, configurations, and possible performance costs.
 
 If you're migrating a wordpress/html site, building a blog, e-commerce site, or a project that doesn't expect many updates, IMO, Jamestack is something to strongly consider.
 
-If your site needs alot of dyncamic CRUD functionality, you should probably consider a differnt stack to build with.
+If your site needs a lot of dynamic CRUD functionality, you should probably consider a different stack to build with.
 
 ## What's Next?
 
 DockerFiles - Getting more experience building and deploying dockerImages.
 
 Cloud Provider Deployments - AWS S3 and Cloudfront.
+
+Plugging Firebase into my portolio site.

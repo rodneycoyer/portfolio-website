@@ -42,7 +42,7 @@ module.exports = {
         path: `${__dirname}/projects`,
       },
     },
-    { // mdx image processing
+    { // mdx images
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects-images`,
