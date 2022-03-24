@@ -47,28 +47,32 @@ tags: ["netlify", "cli", "node.js", "oclif-cli", "ava", "open-source", "contribu
 
 ---
 
+## Netlify CLI <a href="https://www.netlify.com/products/cli/" target="_blank" rel="noreferrer"> <img style="margin-left: 1rem; vertical-align: middle" src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" alt="netlify cli" width="40" height="auto"/></a> <a href="https://github.com/netlify/cli" target="_blank" rel="noreferrer"> <img style="margin-left: 1rem; vertical-align: middle" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" alt="github repo" width="40" height="auto"/></a> <a href="https://hub.docker.com/u/netlify" target="_blank" rel="noreferrer"> <img style="margin-left: 1rem; vertical-align: middle" src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="netlify dockerhub" width="auto" height="40"/></a>
+
+
   When building and hosting applications, developers often face challenges to deliver content quickly to their users. CDN configs can be a pain to connect, setup, run, then manage while serving content.
 
-  Netlify offers features and services for developers and organizations who are looking to build, host, scale, and test applications in a serverless environment. No config needed. Netlify detects frameworks and serverless functions while AWS and Google Cloud provide the CDN under the hood. This approach lets engineers build with the power of Jamstack API's and plugins, while using serverless functions as *glue-code* to distribute applications across the cloud with less work.
+  Netlify offers features and services for developers and organizations who are looking to build, host, scale, and test applications in a serverless environment. No config needed. Netlify detects frameworks and serverless functions while AWS and GCP provide the CDN under the hood. This approach lets engineers build with the power of Jamstack API's and plugins, while using serverless functions as *glue-code* to distribute applications across the cloud with less work.
 
   Netlify CLI allows developers to do all of this from the terminal.
 
-<div style="text-align: center; margin-top: 2rem">
-  <a href="https://www.netlify.com/products/cli/" target="_blank" rel="noreferrer"> <img style="margin: 1rem" src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" alt="netlify cli" width="60" height="60"/></a> <a href="https://github.com/netlify/cli" target="_blank" rel="noreferrer"> <img style="margin: 1rem" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" alt="github repo" width="60" height="60"/></a> <a href="https://hub.docker.com/u/netlify" target="_blank" rel="noreferrer"> <img style="margin: 1rem" src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" alt="netlify dockerhub" width="84" height="60"/></a>
-</div>
+## Contribution
+
+  I wanted to contribute to a well know project used by many. After learning the concepts of Jamstack and building some Gatsby sites, I went through Netlify's project repos and started looking for an issue I could handle and one that would stretch my learning further. After reading through the different tagged issues and associated threads, I volunteered and was assigned an issue related to CLI Commands.
 
 ### Issue 🚩
 
 ❌ <a style="color: #ffa726; text-decoration: none" href="https://github.com/netlify/cli/issues/3579" target="_blank" rel="noreferrer"> `env:list` should hide environment variable values by default, and prompt to show them.</a>
 
+  When a developer calls `env:list` from the command line, all project env key-pairs values were displayed by default. It was determined this was not the best approach. Prompts should be used instead to output the prompt-submission in a table.
+
 ### Solution 💡
 
-✅ Dont share values by default <br/>
-✅ Consider UX <br/>
-✅ Create user prompts <br/>
-✅ Refactor filters and tables <br/>
-✅ Write unit tests with Ava <br />
-✅ Update documentation
+  The parent CLI library is Oclif CLI. I noticed this when I was reviewing the package.json files and reviewing other files. I referenced their API documentation to build a set of prompts using javascipt promises "async/await" syntax. Afterwards, I added some text-highlighting used in other parts of the project for a better UX.
+
+  I also updated the project docs and updated the unit tests with AVA. The project maintainer helped in this area and I learned a lot overall.
+
+  Before the PR was submitted, a series of tests needed to pass and braching/commit strategies needed to be followed.
 
 
 

@@ -9,7 +9,7 @@ github: ''
 
 dockerHub: ''
 
-type: 'learning project'
+type: 'Lab'
 
 role: 'creator'
 
@@ -81,9 +81,9 @@ tags:
 - Docker
 - AWS Beanstalk
 
-After building the login page and thinking on it more, this was starting to remind me of a social-media app. So it was dubbed... Tweetbook 🚀✨
+After setting the initial project up and creating a login page, I decided to build a social-media type application and called it... Tweetbook 🚀✨
 
-This is an ongoing playground project that will be hydrated with more features and functionality with some extra time. Here are the latest updates about the project, architecture, and tech used to build this app.
+Although I share different code snippets, this write-up is not meant to serve as a tutorial. Its more a description of my journey taken to build a cloud-native app and some of the lessons I leaned along the way.
 
 ## Node/Express <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://w7.pngwing.com/pngs/780/57/png-transparent-node-js-javascript-database-mongodb-native-miscellaneous-text-trademark.png" alt="nodejs logo" width="40" height="auto"/></a> <a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: -12px" src="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png" alt="express.js logo" width="40" height="auto"/></a>
 
@@ -93,13 +93,12 @@ This is an ongoing playground project that will be hydrated with more features a
   ![server package.json](/package.json_server.png "Tweetbook file architecture")
 </details>
 
-I wanted to get a server up and running before trying to connect anything with the frontend. At the end of the day, this is the code that will be used to deploy on AWS. Doing this with Node/Express is great for several reasons including:
+I wanted to get a server up and running before trying to connect anything with the frontend. At the end of the day, this is the code that will be used to deploy on AWS while the React-app would eventually be served from an S3 bucket. I decided to use Node.js for a handful of reasons including:
 
-* **Ease of use** - Its javascript! And Node.js is a server-side platform built on top of Google's v8 engine.
+* **AWS Beanstalk** - It's one of the applications types accepted.
+* **Ease of use** - Its part of the MERN stack.
 * **Fast** - it uses an event loop to handle large amounts of asynchronous I/O events in a non-blocking manner.
-* **REST APIs** - writing RESTful microservices are more flexible and easier to implement than SOAP services.
-
-When an http request is made to the server, route handlers and controllers look at the headers and body and respond back appropriately. Most of the errors are handled by Express.js.
+* **REST APIs** - writing RESTful API microservices are more flexible.
 
   <details>
 <summary> API Route Controller </summary>
