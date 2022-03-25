@@ -2,7 +2,6 @@ import * as React from "react";
 
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton"
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
@@ -12,11 +11,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
-import { faCodepen } from "@fortawesome/free-brands-svg-icons/faCodepen";
-import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
 
 const Footer = () => {
     return (
@@ -80,7 +76,7 @@ const Footer = () => {
                     </Typography>
                     <Stack direction="row" spacing={4} mt={2} mb={8} justifyContent="center">
                         <a href="https://gatsbyjs.com/" target="_blank" rel="noreferrer">
-                            <img src="https://www.datocms-assets.com/205/1624021714-cover.png?w=300"       alt="gatsby.js logo" width="40" height="auto"/>
+                            <img src="https://www.datocms-assets.com/205/1624021714-cover.png?w=300" alt="gatsby.js logo" width="40" height="auto"/>
                         </a>
                         <a href="https://graphql.org/" target="_blank" rel="noreferrer">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png" alt="graphql logo" width="40" height="auto" />

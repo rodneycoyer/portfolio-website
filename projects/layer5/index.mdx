@@ -20,7 +20,7 @@ context: "Front End"
 
 year: ""
 
-stack: "gatsby"
+stack: "Gatsby, Material-UI"
 
 short_description: "Cloud Native Application and Infrastructure Management"
 
@@ -50,18 +50,34 @@ tags: ["gatsby", "react", "styled-components", "material-ui", "open-source", "fr
 
 ---
 
-<div style="text-align: center; margin-top: 2rem">
-  <a href="https://layer5.io/" target="_blank" rel="noreferrer"> <img style="margin: 1rem" src="https://avatars.githubusercontent.com/u/44620851?s=200&v=4" alt="netlify cli" width="60" height="60"/></a> <a href="https://github.com/layer5io/layer5" target="_blank" rel="noreferrer"> <img style="margin: 1rem" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" alt="github repo" width="60" height="60"/></a> <a href="https://hub.docker.com/u/layer5" target="_blank" rel="noreferrer"> <img style="margin: 1rem" src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="netlify dockerhub" width="84" height="60"/></a>
+## Layer5 <a href="https://layer5.io/" target="_blank" rel="noreferrer"> <img style="margin-left: 1rem; vertical-align: middle" src="https://avatars.githubusercontent.com/u/44620851?s=200&v=4" alt="netlify cli" width="40" height="auto"/></a> <a href="https://github.com/layer5io/layer5" target="_blank" rel="noreferrer"> <img style="margin-left: 1rem; vertical-align: middle" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" alt="github repo" width="40" height="auto"/></a> <a href="https://hub.docker.com/u/layer5" target="_blank" rel="noreferrer"> <img style="margin-left: 1rem; vertical-align: middle" src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="netlify dockerhub" width="auto" height="40"/></a>
+
+Layer 5 represents the "session" layer of the Open Systems Interconnect (OSCI) Model. It establishes, coordinates, and manages communication of sessions between 2 or more applications or processes. Sessions consist of requests and responses between apps or processes. The session data can then be sychronized and merged into a single stream.
+
+Layer5.io is an open-source community that builds and maintains tools related to cloud-native application infrastructure. When a project grows, so does its infrastructure needs. Layer5.io has developed an ecosystem giving developers tools to configure, manage, and test workload performances.
+
+> "*Expect more from your infrastructure.*"
+>
+> *Layer5.io*
+
+<div style="margin-top: 4rem; margin-bottom: 4rem">
+  <img src="./layer5-projects.png" alt="Layer5.io tools" />
 </div>
+
+## Contribution
+
+I'm interested in learning more about infrastructure and was looking for an issue I could contribute to. Unfortunately, I didn't know RUST or have enough understanding yet. However, their main site is created with Gatsby. So I looked for some front-end issues I could help with and joined the Layer5.io community.
 
 ### Issue 🚩
 
 ❌ <a style="color: #ffa726; text-decoration: none" href="https://github.com/layer5io/layer5/issues/2435" target="_blank" rel="noreferrer"> Handbook icons not responsive </a>
 
+One of their webpages had issues with its icon responsiveness. When inspecting the page, the code was written with inline-styles and the icons pixels were being reduced with css "rem" units. HTML white-spaces and line-break elements were also seen throughout.
+
 ### Solution 💡
 
-✅ Fix styles <br/>
-✅ Refactor code <br/>
-✅ Test for appropriate styling between viewport sizes
+I needed to clean this area up and do some consolodation. When I was inspecting the page, I saw that the markdown files were being styled using SASS with MUI styled-components. I wanted to double those files and check for a solution that may already exist. There wasn't any so I rolled my own and created a class that targeted everything I needed.
+
+After fixing the icon styles and removing the HTML white-spaces and line-breaks, I added aria-label tags where they were missing before I tested and submitted a PR.
 
 

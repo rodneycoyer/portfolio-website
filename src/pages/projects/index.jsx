@@ -32,7 +32,7 @@ import TopLayout from "../../../plugins/gatsby-plugin-top-layout/TopLayoutCompon
 const useStyles = makeStyles((theme) => ({
   link: {
     "&:hover": {
-      color: theme.palette.primary.dark
+      color: theme.palette.primary.main
     },
   }
 }));

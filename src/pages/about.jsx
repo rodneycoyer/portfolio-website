@@ -73,8 +73,8 @@ export default function AboutPage(props) {
 
             <ul>
               <li> Updating my cloud app </li>
-              <li> Writing project write-ups </li>
-              <li> Applying for a new job </li>
+              <li> Updating my projects page </li>
+              <li> Looking for a new opportunity </li>
             </ul>
           </Box>
           <Box>
@@ -135,13 +135,10 @@ export default function AboutPage(props) {
                 <li> I built my first html website with Netscape back in 2001. </li>
                 <li> I have 2 dogs: BoBo and Bailee. </li>
                 <li> House Ravenclaw 🦅 </li>
+                <li> I quit a job and used that time to focus on programming and switch careers.</li>
                 <li> I play finger-style guitar. </li>
-                <li> My favorite video game is either Legend of Zelda: Ocarina of Time, or Final Fantasy Tactics  </li>
-                <li> I ride on things with 2 or more wheels. </li>
-                <li> I grill and smoke foods in any weather. </li>
-                <li> I have 3 ukuleles. </li>
-                <li> I rode a motorcycle from Tacoma to Denver. Then back going through Reno and Crater Lake.</li>
-                <li> Before coding, I worked on High-Rise Buildings in DT Austin as a Project Manager.</li>
+                <li> In 2006, I rode a motorcycle from Seattle to Denver. Then back, going through Reno and Norther California.</li>
+                <li> Before coding, I worked on some large and iconic new-construction projects in DT Austin as a Project Manager.</li>
               </ul>
             </Typography>
           </Box>
