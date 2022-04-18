@@ -69,7 +69,7 @@ export default function AboutPage(props) {
               <strong> What am I working on? </strong>
             </Typography>
 
-            <Typography variant="button"> <em> updated: 03/20/2022 </em> </Typography>
+            <Typography variant="button"> <em> updated: 04/10/2022 </em> </Typography>
 
             <ul>
               <li> Updating my cloud app </li>
@@ -132,13 +132,13 @@ export default function AboutPage(props) {
             </Typography>
             <Typography  color="text.secondary" variant="p">
               <ul>
-                <li> I built my first html website with Netscape back in 2001. </li>
+                <li> I built my first html website with Notepad back in 2001. </li>
                 <li> I have 2 dogs: BoBo and Bailee. </li>
                 <li> House Ravenclaw 🦅 </li>
-                <li> I quit a job and used that time to focus on programming and switch careers.</li>
+                <li> I quit a job and used that time to focus on programming and switched careers.</li>
                 <li> I play finger-style guitar. </li>
                 <li> In 2006, I rode a motorcycle from Seattle to Denver. Then back, going through Reno and Norther California.</li>
-                <li> Before coding, I worked on some large and iconic new-construction projects in DT Austin as a Project Manager.</li>
+                <li> Before programming, I worked on some large and iconic new-construction projects in DT Austin as a Project Manager.</li>
               </ul>
             </Typography>
           </Box>

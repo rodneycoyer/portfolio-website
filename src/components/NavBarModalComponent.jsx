@@ -16,7 +16,7 @@ import ArchitectureIcon from '@mui/icons-material/Architecture';
 const navigationLinks = [
   {id: 0, name: "about", href: "/about"},
   {id: 1, name: "projects", href: "/projects"},
-  {id: 2, name: "contact", href: "/about"},
+  {id: 2, name: "contact", href: "/contact"},
 ];
 // nav modal
 const styleModal = {
