@@ -82,7 +82,7 @@ Although I share different code snippets, this write-up is not meant to serve as
 
 When I started this project, I wanted to develop within a monorepo. The biggest reason was that I would be working in and out of the whole stack. Especially in the beginning while linking my React and Node apps together. This makes it pretty easy for an organization, like me and my 2 dogs, to put together a strategy and have a singular CI/CD process 🌟
 
-### Docker <a href="https://hub.docker.com" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; vertical-align: -4px" src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="docker-hub" width="35" height="auto"/></a>
+### Docker <a href="https://hub.docker.com" target="_blank" rel="noreferrer"><img style="vertical-align: -4px" src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="docker-hub"/></a>
 
 At the root of the project, I added a Dockerfile and provided instructions to build Tweetbook's DockerImage. The image can then be used to spin up a container that has the project and its application specific environment inside. This will probably change, but for now, the Dockerfile provides instructions for a multi-stage build that generates a Node/Express app that serves static files from the React build.
 
@@ -94,7 +94,7 @@ At the root of the project, I added a Dockerfile and provided instructions to bu
 
 ## Frontend Development
 
-### React / Material-UI <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img style="margin-left: .5rem; border-radius: 50%; vertical-align: -6px" src="https://cdn.iconscout.com/icon/free/png-256/react-1-282599.png" alt="react.js logo" width="30" height="auto"/></a> <a href="https://mui.com/" target="_blank" rel="noreferrer"><img style="margin-left: .5rem; border-radius: 50%; vertical-align: -6px" src="https://mui.com/static/logo.png" alt="mui logo" width="30" height="auto"/></a>
+### React / Material-UI <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img style="border-radius: 999px; vertical-align: middle" src="https://cdn.iconscout.com/icon/free/png-256/react-1-282599.png" alt="react.js logo"/></a> <a href="https://mui.com/" target="_blank" rel="noreferrer"><img style="vertical-align: middle" src="https://mui.com/static/logo.png" alt="mui logo"/></a>
 
   <details>
 <summary> Client - package.json </summary>
@@ -108,7 +108,7 @@ Authenticated users can view the application and perform basic CRUD operations w
 
 ## Backend Development
 
-### Node/Express <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://w7.pngwing.com/pngs/780/57/png-transparent-node-js-javascript-database-mongodb-native-miscellaneous-text-trademark.png" alt="nodejs logo" width="30" height="auto"/></a> <a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png" alt="express.js logo" width="30" height="auto"/></a>
+### Node/Express <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img style="border-radius: 999px; vertical-align: middle" src="https://w7.pngwing.com/pngs/780/57/png-transparent-node-js-javascript-database-mongodb-native-miscellaneous-text-trademark.png" alt="nodejs logo"/></a> <a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img style="border-radius: 999px; vertical-align: middle" src="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png" alt="express.js logo"/></a>
 
   <details>
 <summary> Server - package.json </summary>
@@ -130,7 +130,7 @@ Authenticated users can view the application and perform basic CRUD operations w
 
 I built the server as an Express Application. HTTP requests from the browser are routed using RESTful APIs. The server then responds back with the appropriate resource or response.
 
-### Authentication <a href="https://www.passportjs.org/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://avatars.githubusercontent.com/u/1160530?s=280&v=4" alt="passport.js logo" width="30" height="auto"/></a> <a href="https://jwt.io/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://coursework.vschool.io/content/images/2016/06/jwt.png" alt="jwt logo" width="30" height="auto"/></a>
+### Authentication <a href="https://www.passportjs.org/" target="_blank" rel="noreferrer"><img style="vertical-align: middle" src="https://avatars.githubusercontent.com/u/1160530?s=280&v=4" alt="passport.js logo"/></a> <a href="https://jwt.io/" target="_blank" rel="noreferrer"><img style="border-radius: 999px; vertical-align: middle" src="https://coursework.vschool.io/content/images/2016/06/jwt.png" alt="jwt logo"/></a>
 
   <details>
 <summary> Local Strategy - Passport.js </summary>
@@ -146,13 +146,13 @@ I built the server as an Express Application. HTTP requests from the browser are
 
 For authenicated sessions and requests, signed JWTs are stored on the clients browser and passed through the req.headers for verification.
 
-### Data Storage <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 50%; vertical-align: middle" src="https://code4developers.com/wp-content/uploads/2019/10/MongoDBicon.png" alt="mongodb logo" width="30" height="auto"/></a> <a href="https://aws.amazon.com/pm/serv-s3/?trk=fecf68c9-3874-4ae2-a7ed-72b6d19c8034&sc_channel=ps&sc_campaign=acquisition&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Storage|S3|US|EN|Text&s_kwcid=AL!4422!3!488982706722!e!!g!!aws%20s3&ef_id=Cj0KCQjw29CRBhCUARIsAOboZbJRRosGuyDvkhB_dwWPQlug5EBCIdWcY2xt7kUJ_dcZQZHu9sijLYgaAkNIEALw_wcB:G:s&s_kwcid=AL!4422!3!488982706722!e!!g!!aws%20s3" target="_blank" rel="noreferrer"><img style="margin-left: .25rem; border-radius: 5px; vertical-align: middle" src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/core-aws-services/store-and-retrieve-data-with-aws/images/d5d6add0a50dac23693532aec644c5a6_116-bb-1-a-4-0-a-0-d-46-b-2-863-f-1-d-8-a-362-a-3-c-12.png" alt="aws s3 logo" width="30" height="auto"/></a>
+### Data Storage <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img style="vertical-align: middle" src="https://code4developers.com/wp-content/uploads/2019/10/MongoDBicon.png" alt="mongodb logo"/></a> <a href="https://aws.amazon.com/pm/serv-s3/?trk=fecf68c9-3874-4ae2-a7ed-72b6d19c8034&sc_channel=ps&sc_campaign=acquisition&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Storage|S3|US|EN|Text&s_kwcid=AL!4422!3!488982706722!e!!g!!aws%20s3&ef_id=Cj0KCQjw29CRBhCUARIsAOboZbJRRosGuyDvkhB_dwWPQlug5EBCIdWcY2xt7kUJ_dcZQZHu9sijLYgaAkNIEALw_wcB:G:s&s_kwcid=AL!4422!3!488982706722!e!!g!!aws%20s3" target="_blank" rel="noreferrer"><img style="border-radius: 25%; vertical-align: middle" src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/core-aws-services/store-and-retrieve-data-with-aws/images/d5d6add0a50dac23693532aec644c5a6_116-bb-1-a-4-0-a-0-d-46-b-2-863-f-1-d-8-a-362-a-3-c-12.png" alt="aws s3 logo"/></a>
 
 For now, MongoDB is storing all objects. Mongoose ODM ensures the NoSQL database schemas are enforced.
 
 ## Deployment
 
-### AWS Beanstalk <a href="https://aws.amazon.com/elasticbeanstalk/" target="_blank" rel="noreferrer"> <img style="margin-left: .25rem; border-radius: 25%; vertical-align: -7px" src="https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/aws/aws-elastic-beanstalk/logo.svg" alt="aws beanstalk" width="30" height="auto"/></a>
+### AWS Beanstalk <a href="https://aws.amazon.com/elasticbeanstalk/" target="_blank" rel="noreferrer"> <img style="border-radius: 25%; vertical-align: middle" src="https://raw.githubusercontent.com/newrelic/newrelic-quickstarts/v0.106.0/quickstarts/aws/aws-elastic-beanstalk/logo.svg" alt="aws beanstalk"/></a>
 
 Due to the limited engineers available, I decided to launch the app with AWS Beanstalk. The initial stack is built and then can be tweaked and designed as the application and resources grow.
 It supports Node apps and Docker images which makes this a pretty good fit for Tweetbook. After writing a set of instructions in a Dockerrun.aws.json and reading error logs, an environment was created with these resources:

@@ -69,11 +69,11 @@ export default function AboutPage(props) {
               <strong> What am I working on? </strong>
             </Typography>
 
-            <Typography variant="button"> <em> updated: 04/10/2022 </em> </Typography>
+            <Typography variant="button"> <em> updated: 04/26/2022 </em> </Typography>
 
             <ul>
-              <li> Updating my cloud app </li>
-              <li> Updating my projects page </li>
+              <li> Deploying a MERN app with AWS </li>
+              <li> Updating my projects write-ups </li>
               <li> Looking for a new opportunity </li>
             </ul>
           </Box>

@@ -80,7 +80,7 @@ export default function NavBarModal() {
                         fullWidth
                         size="large"
                         variant="outlined"
-                        style={{padding: 30}}
+                        sx={{padding: 4}}
                       >
                         <Typography variant="button-text" component="h1">
                           {item.name}

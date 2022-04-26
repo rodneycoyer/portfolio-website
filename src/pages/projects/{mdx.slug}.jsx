@@ -54,12 +54,13 @@ const TagList = styled("li")(({ theme }) => ({
 }));
 
 const MarkdownWrapper = styled("div")(({ theme }) => ({
+    img: {
+        marginLeft: theme.spacing(2),
+        width: 40,
+    },
     p: {
         color: theme.palette.text.secondary,
-        margin: theme.spacing(2)
-    },
-    ul: {
-        color: theme.palette.text.secondary
+        marginTop: theme.spacing(1),
     },
     h2: {
         color: theme.palette.warning.light,
@@ -67,6 +68,9 @@ const MarkdownWrapper = styled("div")(({ theme }) => ({
     },
     h3: {
         color: theme.palette.warning.dark
+    },
+    ul: {
+        color: theme.palette.text.secondary
     }
 }));
 
