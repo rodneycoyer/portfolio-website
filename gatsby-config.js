@@ -6,9 +6,9 @@ module.exports = {
     author: "Rodney Coyer"
   },
   flags: {
+    PARALLEL_QUERY_RUNNING: true,
     FAST_DEV: true,
     DEV_SSR: true,
-    PARALLEL_QUERY_RUNNING: true
   },
   plugins: [
     `gatsby-plugin-top-layout`,
