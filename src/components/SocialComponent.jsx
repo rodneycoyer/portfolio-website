@@ -43,14 +43,6 @@ const Social = ({ direction }) => {
                 </IconButton>
             </Link>
             <Link
-                href="https://twitter.com/rodneycoyer"
-                target="blank"
-            >
-                <IconButton>
-                    <TwitterIcon className={styles.icon} />
-                </IconButton>
-            </Link>
-            <Link
                 href="https://hub.docker.com/repositories"
                 target="blank"
             >

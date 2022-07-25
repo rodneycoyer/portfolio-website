@@ -47,14 +47,6 @@ const Footer = () => {
                             </IconButton>
                         </Link>
                         <Link
-                            href="https://twitter.com/rodneycoyer"
-                            target="blank"
-                        >
-                            <IconButton>
-                                <TwitterIcon />
-                            </IconButton>
-                        </Link>
-                        <Link
                             href="https://hub.docker.com/repositories"
                             target="blank"
                         >

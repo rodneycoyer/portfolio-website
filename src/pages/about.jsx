@@ -49,8 +49,10 @@ export default function AboutPage(props) {
             <br />
             <br />
             <Typography variant="p" color="text.secondary">
-              I have a lot of fun working on web, mobile, and cloud apps and contributing to Open Source projects.
-              I seek knowledge and understanding so I build projects, read articles, listen to podcasts, and contribute code in my spare time.
+              In my past life as a Project Manager, creative thinking, problem solving, and a lot of grit was required to help build airports, high-rises, hotels, and stadium projects with the nations largest General Contractors.
+              <br />
+              <br />
+              With some prodding from good friends, I decided to try and learn some programming, and haven't looked back since!
             <br />
             <br />
               When I'm not pushing code, you can find me in the outdoors on an adventure, working a bbq-smoker, or dunking oreo's.
@@ -69,11 +71,11 @@ export default function AboutPage(props) {
               <strong> What am I working on? </strong>
             </Typography>
 
-            <Typography variant="button"> <em> updated: 04/26/2022 </em> </Typography>
+            <Typography variant="button"> <em> updated: 07/25/2022 </em> </Typography>
 
             <ul>
-              <li> Deploying a MERN app with AWS </li>
               <li> Updating my projects write-ups </li>
+              <li> Advancing my backend skills </li>
               <li> Looking for a new opportunity </li>
             </ul>
           </Box>
@@ -111,14 +113,6 @@ export default function AboutPage(props) {
                   width="60"
                 />
               </a>
-              <a
-                href="https://twitter.com/rodneycoyer"
-                target="blank"
-                rel="noreferrer">
-                <img
-                  src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg"
-                  alt="twitter rodneycoyer"
-                  width="60" /></a>
             </Stack>
           </Box>
           <Box>
@@ -135,7 +129,7 @@ export default function AboutPage(props) {
                 <li> I built my first html website with Notepad back in 2001. </li>
                 <li> I have 2 dogs: BoBo and Bailee. </li>
                 <li> House Ravenclaw 🦅 </li>
-                <li> I quit a job and used that time to focus on programming and switched careers.</li>
+                <li> I quit a job to focus on software engineering and switched careers.</li>
                 <li> I play finger-style guitar. </li>
                 <li> In 2006, I rode a motorcycle from Seattle to Denver. Then back, going through Reno and Norther California.</li>
                 <li> Before programming, I worked on some large and iconic new-construction projects in DT Austin as a Project Manager.</li>
