@@ -49,16 +49,13 @@ export default function AboutPage(props) {
             <br />
             <br />
             <Typography variant="p" color="text.secondary">
-              In my past life as a Project Manager, creative thinking, problem solving, and a lot of grit was required to help build airports, high-rises, hotels, and stadium projects with the nations largest General Contractors.
+              I'm currently working at <a className={styles.link} href="https://www.chinookroofing.com/" target={"_blank"}> Chinook Building Envelope Services </a> as a Software Developer, Wall Systems Program Developer, and Project Manager.
               <br />
               <br />
-              With some prodding from good friends, I decided to try and learn some programming, and haven't looked back since!
+              Its a unique roll for my skill-set and I'm excited to work on a diverse set of projects that I'll eventually blog about.
             <br />
             <br />
-              When I'm not pushing code, you can find me in the outdoors on an adventure, working a bbq-smoker, or dunking oreo's.
-            <br />
-            <br />
-              You can check out some of my <Link to="/projects" className={styles.link}> <strong> projects here </strong> </Link>, or at one my <a className={styles.link} href="https://github.com/rodneycoyer" target="blank" aria-label="github link"><strong> gitHub repo </strong></a>.
+              You can check out some of my <Link to="/projects" className={styles.link}> <strong> projects here. </strong></Link>
             </Typography>
           </Box>
           <Box>
@@ -71,12 +68,11 @@ export default function AboutPage(props) {
               <strong> What am I working on? </strong>
             </Typography>
 
-            <Typography variant="button"> <em> updated: 07/25/2022 </em> </Typography>
-
             <ul>
-              <li> Updating my projects write-ups </li>
-              <li> Advancing my backend skills </li>
-              <li> Looking for a new opportunity </li>
+              <li> Oracle NetSuite - developing app integrations and features. </li>
+              <li> Evaluating SaaS solutions and software architecture. </li>
+              <li> Developing an Architectural Composite Sheet Metal Systems Division. </li>
+              <li> Managing some construction projects. </li>
             </ul>
           </Box>
           <Box>
@@ -129,10 +125,9 @@ export default function AboutPage(props) {
                 <li> I built my first html website with Notepad back in 2001. </li>
                 <li> I have 2 dogs: BoBo and Bailee. </li>
                 <li> House Ravenclaw 🦅 </li>
-                <li> I quit a job to focus on software engineering and switched careers.</li>
+                <li> I'm an outdoor enthusiast 🌲</li>
                 <li> I play finger-style guitar. </li>
                 <li> In 2006, I rode a motorcycle from Seattle to Denver. Then back, going through Reno and Norther California.</li>
-                <li> Before programming, I worked on some large and iconic new-construction projects in DT Austin as a Project Manager.</li>
               </ul>
             </Typography>
           </Box>
